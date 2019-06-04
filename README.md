@@ -20,3 +20,41 @@ TBA
 TBA
 
 ### Day one
+* Met with product owner, reviewed previous design work from Red Academy
+
+* Technical meeting, decided tech stack:
+  * HTML, CSS, SASS, React with Context API
+  * Node, Express, Axios
+  * MongoDB, Mongoose
+  * Webpack, Babel from scratch
+  * Jest, Travis CI, Supertest, React testing library
+  * ESLint
+  * Heroku
+  * Stretch goals: Formik, Passport
+
+* Assigned Project Roles:
+  * Scrum Master: James
+  * QA: Ryan
+  * UX/UI: John
+  * DevOps: Dylan 
+
+* Whiteboard Wireframe
+TBA
+
+### Day Two
+#### Continue developing prototype
+
+* Created mobile path/flow
+
+* Created prototype for additional missing pages:
+  * Employer Dashboard
+  * Employer and Student Match pages 
+
+* Mobile Wireframe
+TBA
+
+#### Coding prep/planning
+
+* Decided on endpoints for front-end
+
+* Tested Webpack/Babel/React config
