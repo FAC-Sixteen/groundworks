@@ -10,8 +10,8 @@
     "mongoose": "^5.5.12"
   },
   "scripts": {
-    "start": "node index.js",
-    "devStart": "concurrently \"npm start\" \"cd ../client && yarn start\""
+    "start": "node ./server/index.js",
+    "devStart": "concurrently \"cd ./server && yarn start\" \"cd ./client && yarn start\""
   },
   "devDependencies": {
     "concurrently": "^4.1.0"
