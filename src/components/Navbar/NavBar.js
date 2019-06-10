@@ -22,9 +22,6 @@ const NavBar = () => {
             Login
           </a>
         </li>
-        <li className="NavBar--li">
-          <img src="" alt="" />
-        </li>
       </ul>
     </div>
   );
