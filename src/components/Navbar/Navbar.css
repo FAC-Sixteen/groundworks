@@ -1,0 +1,40 @@
+.NavBar {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.NavBar--li__logo {
+  height: 3rem;
+  width: auto;
+  z-index: 10;
+  position: absolute;
+}
+
+.NavBar--ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.NavBar--li {
+  float: right;
+}
+
+.NavBar--li .NavBar--li__a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.NavBar--joinbutton {
+  color: white;
+  background-color: #f4c434;
+  border-radius: 25px;
+  padding: 7px 20px;
+}
+
+.NavBar--loginbutton {
+  padding: 7px 20px;
+  color: black;
+}
