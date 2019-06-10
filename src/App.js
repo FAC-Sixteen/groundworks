@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import NavBar from "./components/Navbar/NavBar";
+import "./normalize.css";
+import "./app.css";
 
 const App = () => {
-    return (
-      <div>
-        <h1>Client Side ReactApp</h1>
-      </div>
-    );
-}
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
+};
 
 export default App;
