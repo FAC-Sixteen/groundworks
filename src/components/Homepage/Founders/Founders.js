@@ -4,7 +4,7 @@ import "./Founders.css";
 const Founders = () => {
   return (
     <div class="FoundersComponent">
-    <h2>From the Founders</h2>
+    <h2 class="FoundersComponent--header">From the Founders</h2>
     <div class="FoundersComponent--container">
     <div class="FoundersComponent--portraitphoto__container">
     <img class="FoundersComponent--portraitphoto" src="./../../Assets/portrait-photo.png" alt=""/>
