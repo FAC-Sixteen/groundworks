@@ -3,18 +3,24 @@
   flex-direction: column;
   align-items: center;
   background-color: rgba(246, 250, 254, 1);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .FoundersComponent--portraitphoto__container {
  text-align: center;
  padding: 0rem 2rem 0rem 2rem;
+}
 
+.FoundersComponent--header {
+  padding-bottom: 2rem;
 }
 
 .FoundersComponent--portraitphoto {
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .FoundersComponent--container {
@@ -25,6 +31,8 @@
 .FoundersComponent--socialicons__icons {
   height: 1.5rem;
   width: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .FoundersComponent--title {
@@ -33,6 +41,7 @@
 
 .FoundersComponent--name {
   margin: 0px;
+  padding-top: 0.5rem;
 }
 
 @media only screen and (max-width: 530px) {
