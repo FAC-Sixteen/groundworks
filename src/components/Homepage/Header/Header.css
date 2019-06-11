@@ -1,7 +1,48 @@
 .headerComponent {
-  width: 100%;
-  height: 100%;
+  display: flex;
   background-color: rgba(235, 238, 252, 1);
+  padding: 15vw;
+}
+
+.headerComponent--student {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: -2vw;
+  top: -12vw;
+  width: 50vw;
+  /* font-size: 1vw; */
+}
+
+.headerComponent--employer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 4vw;
+  right: -18vw;
+  width: 50vw;
+  padding: 3rem;
+  /* font-size: 1vw; */
+}
+
+.headerComponent--headerStudent {
+  font-size: 2.5rem;
+  padding: 1vw;
+}
+
+.headerComponent--headerEmployers {
+  font-size: 2.5rem;
+  padding: 1vw;
+}
+.headerComponent--studentParagraph {
+  font-size: 1rem;
+  position: relative;
+}
+.headerComponent--employerParagraph {
+  font-size: 1rem;
+  position: relative;
 }
 
 .headercomponent--employer:after {
@@ -10,4 +51,10 @@
   border-left: 100vw solid transparent;
   width: 0;
   position: absolute;
+}
+
+@media only screen and (max-width: 530px) {
+  .headerComponent {
+    flex-direction: column;
+  }
 }
