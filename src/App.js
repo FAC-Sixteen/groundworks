@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./normalize.css";
-import "./app.css";
+import "./App.css";
 
 import Info from "./components/Homepage/Info/Info";
 import Header from "./components/Homepage/Header/Header";
