@@ -1,24 +1,23 @@
 import React, { Component } from "react";
+import NavBar from "./components/Navbar/NavBar";
+import Footer from "./components/Footer/Footer";
 import "./normalize.css";
-import "./App.css";
+import "./app.css";
 
 import Info from "./components/Homepage/Info/Info";
 import Header from "./components/Homepage/Header/Header";
+import Testimonials from "./components/Homepage/Testimonials/Testimonials.js";
 import Founders from "./components/Homepage/Founders/Founders";
-import NavBar from "./components/Navbar/NavBar";
-import Footer from "./components/Footer/Footer";
-import ClientJobsToggle from "./components/ClientDashboard/ClientJobsToggle/ClientJobsToggle";
-import Ourplatform from "./components/Homepage/Ourplatform/Ourplatform";
 
 const App = () => {
   return (
     <div>
-      <NavBar />
+      <h1>Client Side ReactApp</h1>
       <Header />
+      <NavBar />
       <Info />
-      <Ourplatform />
+      <Testimonials />
       <Founders />
-      <ClientJobsToggle />
       <Footer />
     </div>
   );
