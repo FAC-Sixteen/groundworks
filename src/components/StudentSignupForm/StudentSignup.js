@@ -10,8 +10,8 @@ function StudentSignup() {
   const handleChange = (event) => {
     setData({
       ...data, [event.target.name]: event.target.value
-    })
-  }
+    })   //array required as first param line 12 to add to but not replace state
+  }     //second param line 12 matches key-value pairs in state object line 6
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +27,7 @@ function StudentSignup() {
   // }
   // addStudent();
   // props.history.push('/dashboard');
-    setData({firstName:"", lastName: "", email: "",
+    setData({firstName:"", lastName: "", email: "",   //clear form on submit
       phoneNumber: null, password: "", university: "", yearOfStudy: 0,
       courseStudied: "", aboutYou: "", LinkedinURL: ""});
 }
@@ -64,7 +64,7 @@ function StudentSignup() {
         <label for="courseStudied">Course of Study: </label>
         <input id="courseStudied" type="text" name="courseStudied"
           value={data.courseStudied} onChange={handleChange} />
-<h2>skills checkbox/dropdown</h2>
+{/* <h2>skills checkbox/dropdown</h2> */}
 
         <label for="aboutYou">About Yourself: </label>
         <input id="aboutYou "type="text" name="aboutYou"
