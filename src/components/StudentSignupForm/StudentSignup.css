@@ -1,5 +1,4 @@
-.SignupForm {
-}
+.SignupForm {}
 
 .Signup--Fieldset {
   border: 1px solid black;
@@ -8,8 +7,8 @@
   text-align: center;
 }
 
-.Signup--label {
-}
+.Signup--label {}
+
 .Signup--input {
   float: right;
   width: 50%;
@@ -21,8 +20,7 @@
   text-align: left;
 }
 
-.Signup--div-p1 {
-}
+.Signup--div-p1 {}
 
 .SignupForm--submit {
   display: block;
