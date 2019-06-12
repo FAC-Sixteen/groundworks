@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./normalize.css";
 import "./App.css";
 
+
+import LoginPortal from "./components/LoginRegister/LoginPortal/LoginPortal";
 import NavBar from "./components/Navbar/NavBar";
 import Header from "./components/Homepage/Header/Header";
 import Info from "./components/Homepage/Info/Info";
