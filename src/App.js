@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import "./normalize.css";
 import "./App.css";
 
+
 import LoginPortal from "./components/LoginRegister/LoginPortal/LoginPortal";
-import Info from "./components/Homepage/Info/Info";
-import Header from "./components/Homepage/Header/Header";
-import Founders from "./components/Homepage/Founders/Founders";
 import NavBar from "./components/Navbar/NavBar";
+import Header from "./components/Homepage/Header/Header";
+import Info from "./components/Homepage/Info/Info";
+import Ourplatform from "./components/Homepage/Ourplatform/Ourplatform.js";
+import Testimonials from "./components/Homepage/Testimonials/Testimonials.js";
+import Founders from "./components/Homepage/Founders/Founders";
 import Footer from "./components/Footer/Footer";
-import ClientJobsToggle from "./components/ClientDashboard/ClientJobsToggle/ClientJobsToggle";
-import Ourplatform from "./components/Homepage/Ourplatform/Ourplatform";
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
       <Header />
       <Info />
       <Ourplatform />
+      <Testimonials />
       <Founders />
-      <ClientJobsToggle />
       <Footer />
     </div>
   );
