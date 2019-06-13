@@ -138,6 +138,12 @@ const ClientSignupForm = () => {
               </label>
             </div>
           </div>
+          <input
+            className="SignupForm--submit"
+            type="submit"
+            name="submit"
+            value="submit"
+          />
         </fieldset>
       </form>
     </div>
