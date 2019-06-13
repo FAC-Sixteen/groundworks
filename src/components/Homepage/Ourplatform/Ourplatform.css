@@ -1,0 +1,33 @@
+.OurplatformComponent {
+  text-align: center;
+  background-color: rgba(246, 250, 254, 1);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.OurplatformComponent--header {
+  padding-bottom: 5vh;
+}
+
+.OurplatformComponent--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.OurplatformComponent--leftdiv__container {
+  width: 50vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: justify;
+}
+
+.OurplatformComponent--rightdiv__container {
+  width: 50vw;
+}
+
+@media only screen and (max-width: 530px) {
+  .OurplatformComponent--container {
+    flex-direction: column-reverse;
+  }
+}

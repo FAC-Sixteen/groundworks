@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+}
+
+.footer-img {
+  height: 2rem;
+  width: auto;
+  padding: 0 1rem 0 1rem;
+}
+
+.footer--paragraph {
+  text-align: center;
+  background-color: #f1f1f1;
+}

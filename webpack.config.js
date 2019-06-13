@@ -6,7 +6,8 @@ module.exports = {
   output: {
     // Here we are telling it where to build when we call Yarn run build
     path: path.resolve(__dirname, "./dist"),
-    filename: "bundle.js" // setting name of bundle file.
+    filename: "bundle.js", // setting name of bundle file.
+    publicPath: '/' //required for React router
   },
   module: {
     rules: [
@@ -19,6 +20,7 @@ module.exports = {
     net: "empty"
   },
   devServer: {
+    historyApiFallback: true, //goes back to hompage if uncaught exception, also required for React Router
     port: 3000, // Port for the front end.
     contentBase: "src/",
     compress: true, // compresses thr file

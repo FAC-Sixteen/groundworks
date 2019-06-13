@@ -1,0 +1,53 @@
+.form {
+  display: inline-block;
+  border-radius: 25px;
+  padding: 0.5rem 3rem 9rem 3rem;
+  margin: 2rem;
+  background-color: white;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.form--el {
+  margin: 1rem 1rem 0 0;
+}
+
+.form--title {
+  font-size: 3rem;
+}
+
+.form--subtitle {
+  font-size: 2rem;
+  margin: 2rem 1rem 3rem 0;
+  color: #568cf9;
+}
+
+.form--input__title {
+  font-size: 1.5rem;
+  color: #568cf9;
+}
+
+.input {
+  font-size: 1rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 95%;
+  height: 2rem;
+}
+.input:focus {
+  outline: none;
+}
+
+.form--button {
+  color: #568cf9;
+  background-color: #fff;
+  border: solid 2px #568cf9;
+  border-radius: 25px;
+  padding: 13px 38px;
+  font-size: 1rem;
+  margin: 4rem 35% 0 35%;
+}
+
+.form--button:focus {
+  outline: none;
+}
