@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "./LoginPortal.css";
 
 const LoginPortal = () => {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(name, email, password);
+    console.log(email, password);
   };
 
   return (
@@ -16,13 +15,6 @@ const LoginPortal = () => {
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form--el form--title">Welcome to Groundworks.</h1>
         <p className="form--subtitle">Enter details below.</p>
-        <h2 className="form--el form--input__title">Name</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={e => setName({ name: e.target.value })}
-        />
-        <h2 className="form--el form--input__title">Email</h2>
         <input
           className="form--el input"
           type="text"
