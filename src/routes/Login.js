@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import LoginPortal from "../components/LoginRegister/LoginPortal/LoginPortal.js";
+import LoginPortal from "../components/LoginRegister/LoginPortal/LoginPortal";
 
 const Login = () => {
   return (
     <div>
-      <h1>Login Page</h1>
       <LoginPortal />
     </div>
   );
