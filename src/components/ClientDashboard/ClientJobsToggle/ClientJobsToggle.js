@@ -3,10 +3,10 @@ import "./ClientJobsToggle.css";
 
 const ClientJobsToggle = () => {
   return (
-    <div class="ClientJobsToggle--container">
-    <div class="ClientJobsToggle--div">New</div>
-    <div class="ClientJobsToggle--div">Live</div>
-    <div class="ClientJobsToggle--div">Completed</div>
+    <div className="ClientJobsToggle--container">
+      <div className="ClientJobsToggle--div">New</div>
+      <div className="ClientJobsToggle--div">Live</div>
+      <div className="ClientJobsToggle--div">Completed</div>
     </div>
   );
 };

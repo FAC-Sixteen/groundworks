@@ -1,0 +1,8 @@
+.StudentJobsToggle--container {
+}
+
+.StudentJobsToggle--div {
+  width: 1rem;
+  height: 0.5rem;
+  border: 2px solid black;
+}
