@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './StudentSignup.css';
+import './StudentSignupForm.css';
 import axios from 'axios';
 
-function StudentSignup() {
+function StudentSignupForm() {
   const [data, setData] = useState({firstName:"", lastName: "", email: "",
     phoneNumber: "", password: "", university: "", yearOfStudy: "",
     courseStudied: "", aboutYou: "", LinkedinURL: ""});
@@ -111,4 +111,4 @@ function StudentSignup() {
   )
 }
 
-export default StudentSignup;
+export default StudentSignupForm;
