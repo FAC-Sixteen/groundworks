@@ -1,63 +1,40 @@
 import React, { useState } from "react";
-import "./StudentSignupForm.css";
+import "./ClientSignupForm.css";
 import axios from "axios";
 
-function StudentSignupForm() {
-  const [data, setData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    password: "",
-    university: "",
-    yearOfStudy: "",
-    courseStudied: "",
-    aboutYou: "",
-    LinkedinURL: ""
-  });
+const ClientSignupForm = () => {
+  const [data, setData] = useState("");
 
   const handleChange = event => {
     setData({
       ...data,
       [event.target.name]: event.target.value
-    }); //rest parameter adds to current state without replacing/deleting it
-  }; //second param line 12 matches key-value pairs in state object line 6
+    });
+  };
 
   const handleSubmit = event => {
     event.preventDefault();
 
-    const addStudent = async () => {
-      console.log(`Fake submitting: ${data}`);
+    const addClient = async () => {
+      console.log(`Fake shit: ${data}`);
       try {
-        return await axios.post("/api/student/sign-up", data);
+        return await axios.post("/api/client/sign-up", data);
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     };
-    addStudent();
-    setData({
-      firstName: "",
-      lastName: "",
-      email: "", //clear form on submit
-      phoneNumber: "",
-      password: "",
-      university: "",
-      yearOfStudy: "",
-      courseStudied: "",
-      aboutYou: "",
-      LinkedinURL: ""
-    });
+    addClient();
+    setData("");
   };
-
   return (
     <div>
       <form className="SignupForm" onSubmit={handleSubmit}>
         <fieldset className="Signup--Fieldset">
-          <legend>Student Signup</legend>
+          <legend>Client Signup</legend>
 
           <div className="Signup--div-p1">
             <div className="Signup--row">
-              <label className="Signup--label" htmlFor="firstName">
+              <label className="Signup-label" htmlFor="firstName">
                 First Name:
                 <input
                   className="Signup--input"
@@ -74,9 +51,9 @@ function StudentSignupForm() {
                 Last Name:
                 <input
                   className="Signup--input"
-                  id="lastName"
                   type="text"
                   name="lastName"
+                  id="lastName"
                   value={data.lastName}
                   onChange={handleChange}
                 />
@@ -96,6 +73,19 @@ function StudentSignupForm() {
               </label>
             </div>
             <div className="Signup--row">
+              <label className="Signup--label" htmlFor="password">
+                Password:
+                <input
+                  className="Signup--input"
+                  id="password"
+                  type="text"
+                  name="password"
+                  value={data.password}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="Signup--row">
               <label className="Signup--label" htmlFor="phoneNumber">
                 Phone Number:
                 <input
@@ -109,99 +99,49 @@ function StudentSignupForm() {
               </label>
             </div>
             <div className="Signup--row">
-              <label className="Signup--label" htmlFor="password">
-                Password:
+              <label className="Signup--label" htmlFor="jobTitle">
+                Job Title:
                 <input
                   className="Signup--input"
-                  id="password"
+                  id="jobTitle"
                   type="text"
-                  name="password"
-                  value={data.password}
+                  name="jobTitle"
+                  value={data.jobTitle}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="Signup--row">
+              <label className="Signup--label" htmlFor="companyName">
+                Company Name:
+                <input
+                  className="Signup--input"
+                  id="companyName"
+                  type="text"
+                  name="companyName"
+                  value={data.companyName}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="Signup--row">
+              <label className="Signup--label" htmlFor="companyUrl">
+                Company URL:
+                <input
+                  className="Signup--input"
+                  id="companyUrl"
+                  type="text"
+                  name="companyUrl"
+                  value={data.companyUrl}
                   onChange={handleChange}
                 />
               </label>
             </div>
           </div>
-
-          {/*Second half of form displayed separately on mobile */}
-          <div className="Signup--div-p2">
-            <div className="Signup--row">
-              <label className="Signup--label" htmlFor="university">
-                University:
-                <input
-                  className="Signup--input"
-                  id="university"
-                  type="text"
-                  name="university"
-                  value={data.university}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-            <div className="Signup--row">
-              <label className="Signup--label" htmlFor="yearOfStudy">
-                Year of Study:
-                <input
-                  className="Signup--input"
-                  id="yearOfStudy"
-                  type="text"
-                  name="yearOfStudy"
-                  value={data.yearOfStudy}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-            <div className="Signup--row">
-              <label className="Signup--label" htmlFor="courseStudied">
-                Course of Study:
-                <input
-                  className="Signup--input"
-                  id="courseStudied"
-                  type="text"
-                  name="courseStudied"
-                  value={data.courseStudied}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-            <div className="Signup--row">
-              <label className="Signup--label" htmlFor="aboutYou">
-                About Yourself:
-                <input
-                  className="Signup--input"
-                  id="aboutYou "
-                  type="text"
-                  name="aboutYou"
-                  value={data.aboutYou}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-            <div className="Signup--row">
-              <label className="Signup--label" htmlFor="LinkedinURL">
-                LinkedinURL:
-                <input
-                  className="Signup--input"
-                  id="LinkedinURL "
-                  type="text"
-                  name="LinkedinURL"
-                  value={data.LinkedinURL}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-          </div>
-
-          <input
-            className="SignupForm--submit"
-            type="submit"
-            name="submit"
-            value="submit"
-          />
         </fieldset>
       </form>
     </div>
   );
-}
+};
 
-export default StudentSignupForm;
+export default ClientSignupForm;
