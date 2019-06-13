@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import LoginPortal from "../components/LoginRegister/LoginPortal/LoginPortal";
-
+import RegisterPortal from "../components/LoginRegister/RegisterPortal/RegisterPortal";
 
 const Join = () => {
   return (
     <div>
-      <LoginPortal />
+      <RegisterPortal />
     </div>
   );
 };

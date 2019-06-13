@@ -15,6 +15,7 @@ const LoginPortal = () => {
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form--el form--title">Welcome to Groundworks.</h1>
         <p className="form--subtitle">Enter details below.</p>
+        <h2 className="form--el form--input__title">Email</h2>
         <input
           className="form--el input"
           type="text"

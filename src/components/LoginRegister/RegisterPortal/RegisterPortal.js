@@ -34,7 +34,7 @@ const RegisterPortal = () => {
           type="text"
           onChange={e => setPassword({ password: e.target.value })}
         />
-        <input className="form--button" type="submit" value="Login" />
+        <input className="form--button" type="submit" value="Register" />
       </form>
     </div>
   );

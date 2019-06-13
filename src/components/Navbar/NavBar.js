@@ -14,14 +14,14 @@ const NavBar = () => {
           />
         </li>
         <li className="NavBar--li">
-          <Link to={"/Join"} className="NavBar--li__a NavBar--joinbutton" >
+          <Link to={"/Join"} className="NavBar--li__a NavBar--joinbutton">
             Join
           </Link>
         </li>
         <li className="NavBar--li">
-          <a className="NavBar--li__a NavBar--loginbutton" href="">
+          <Link to={"/Login"} className="NavBar--li__a NavBar--loginbutton">
             Login
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
