@@ -1,29 +1,31 @@
-import React, { Component } from "react";
+import React from 'react';
 import "./normalize.css";
-import "./App.css";
+import Home from './routes/Home';
+import Login from './routes/Login';
+import StudentSignup from './routes/StudentSignup';
+import ClientSignup from './routes/ClientSignup';
+import StudentDashboard from './routes/StudentDashboard';
+import ClientDashboard from './routes/ClientDashboard';
+import NewBrief from './routes/NewBrief';
 
-
-import LoginPortal from "./components/LoginRegister/LoginPortal/LoginPortal";
-import NavBar from "./components/Navbar/NavBar";
-import Header from "./components/Homepage/Header/Header";
-import Info from "./components/Homepage/Info/Info";
-import Ourplatform from "./components/Homepage/Ourplatform/Ourplatform.js";
-import Testimonials from "./components/Homepage/Testimonials/Testimonials.js";
-import Founders from "./components/Homepage/Founders/Founders";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <NavBar />
-      <Header />
-      <Info />
-      <Ourplatform />
-      <Testimonials />
-      <Founders />
-      <Footer />
-    </div>
-  );
-};
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={ Home } />
+          <Route path="/Login" component={ Login } />
+          <Route path="/StudentSignup" component={ StudentSignup } />
+          <Route path="/ClientSignup" component={ ClientSignup } />
+          <Route path="/StudentDashboard" component={ StudentDashboard } />
+          <Route path="/ClientDashboard" component={ ClientDashboard } />
+          <Route path="/NewBrief" component={ NewBrief } />
+        </Switch>
+      </div>
+    </Router>
+  )
+}
 
 export default App;
