@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -13,9 +14,9 @@ const NavBar = () => {
           />
         </li>
         <li className="NavBar--li">
-          <a className="NavBar--li__a NavBar--joinbutton" href="">
+          <Link to={"/Join"} className="NavBar--li__a NavBar--joinbutton" >
             Join
-          </a>
+          </Link>
         </li>
         <li className="NavBar--li">
           <a className="NavBar--li__a NavBar--loginbutton" href="">
