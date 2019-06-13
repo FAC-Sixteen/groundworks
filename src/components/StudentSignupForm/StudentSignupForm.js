@@ -15,20 +15,19 @@ function StudentSignupForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(data)
-  // const addStudent = async () => {
-  //   console.log(`Fake submitting: ${data}`);
-  //   try {
-  //     return await
-  //     axios.post('/api/student/create', this.data)
-  //   } catch(error) {
-  //     console.error(error)
-  //   }
-  // }
-  // addStudent();
-  // props.history.push('/dashboard');
-    setData({firstName:"", lastName: "", email: "",   //clear form on submit
-      phoneNumber: null, password: "", university: "", yearOfStudy: 0,
+
+  const addStudent = async () => {
+    console.log(`Fake submitting: ${data}`);
+    try {
+      return await
+      axios.post('/api/student/sign-up', data)
+    } catch(error) {
+      console.error(error)
+    }
+  }
+  addStudent();
+  setData({firstName:"", lastName: "", email: "",   //clear form on submit
+      phoneNumber: "", password: "", university: "", yearOfStudy: "",
       courseStudied: "", aboutYou: "", LinkedinURL: ""});
   }
 
