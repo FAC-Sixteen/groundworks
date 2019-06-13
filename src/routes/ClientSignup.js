@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import ClientSignupForm from "../components/clientSignupForm/ClientSignupForm";
 
 const ClientSignup = () => {
   return (
     <div>
-      <h1>ClientSignup Page</h1>
+      <ClientSignupForm />
     </div>
   );
 };
