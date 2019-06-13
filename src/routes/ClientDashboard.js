@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ClientJobsToggle from "../components/ClientDashboard/ClientJobsToggle/ClientJobsToggle";
+import ClientProfileCard from "../components/ClientDashboard/ClientProfileCard/ClientProfileCard";
 
 const ClientDashboard = () => {
   return (
     <div>
-      <h1>ClientDashboard Page</h1>
+      <ClientProfileCard />
       <ClientJobsToggle />
     </div>
   );

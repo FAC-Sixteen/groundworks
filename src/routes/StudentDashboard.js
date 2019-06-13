@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import StudentJobsToggle from "../components/StudentDashboard/StudentJobsToggle/StudentJobsToggle";
+import ShortStudentProfileCard from "../components/StudentDashboard/ShortStudentProfileCard/ShortStudentProfileCard";
 
 const StudentDashboard = () => {
   return (
     <div>
-      <h1>StudentDashboard Page</h1>
+      <ShortStudentProfileCard />
       <StudentJobsToggle />
     </div>
   );
