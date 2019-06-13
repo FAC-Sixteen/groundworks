@@ -1,4 +1,5 @@
 .FoundersComponent {
+  margin: 15px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,20 +8,10 @@
   padding-bottom: 1rem;
 }
 
-.FoundersComponent--portraitphoto__container {
- text-align: center;
- padding: 0rem 2rem 0rem 2rem;
-}
-
 .FoundersComponent--header {
   padding-bottom: 2rem;
-}
-
-.FoundersComponent--portraitphoto {
-  height: 8rem;
-  width: 8rem;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  font-weight: 800;
 }
 
 .FoundersComponent--container {
@@ -28,20 +19,20 @@
   flex-direction: row;
 }
 
-.FoundersComponent--socialicons__icons {
-  height: 1.5rem;
-  width: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
+.FoundersComponent--text {
+  max-width: 60em;
+  text-align: center;
+  font-size: 1em;
+  margin: 15px 0px;
 }
 
-.FoundersComponent--title {
-  margin: 0px;
-}
-
-.FoundersComponent--name {
-  margin: 0px;
-  padding-top: 0.5rem;
+.FoundersComponent--joinbutton {
+  color: white;
+  background-color: #f4c434;
+  border-radius: 25px;
+  font-size: 1.4em;
+  padding: 7px 20px;
+  margin: 30px 0px;
 }
 
 @media only screen and (max-width: 530px) {
