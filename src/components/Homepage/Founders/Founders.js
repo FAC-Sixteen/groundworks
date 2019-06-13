@@ -1,42 +1,40 @@
 import React from 'react';
 import "./Founders.css";
+import Founder from "./Founder/Founder.js"
 
 const Founders = () => {
   return (
     <div class="FoundersComponent">
-    <h2 class="FoundersComponent--header">From the Founders</h2>
-    <div class="FoundersComponent--container">
-    <div class="FoundersComponent--portraitphoto__container">
-    <img class="FoundersComponent--portraitphoto" src="./../../assets/portrait-photo.png" alt=""/>
-    <h3 class="FoundersComponent--name">Alex Foster</h3>
-    <h4 class="FoundersComponent--title">COO</h4>
-    <div class="FoundersComponent--socialicons__container">
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    </div>
-    </div>
-    <div class="FoundersComponent--portraitphoto__container">
-    <img class="FoundersComponent--portraitphoto" src="./../../assets/portrait-photo.png" alt=""/>
-    <h3 class="FoundersComponent--name">Alex Foster</h3>
-    <h4 class="FoundersComponent--title">COO</h4>
-    <div class="FoundersComponent--socialicons__container">
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    </div>
-    </div>
-    <div class="FoundersComponent--portraitphoto__container">
-    <img class="FoundersComponent--portraitphoto" src="./../../assets/portrait-photo.png" alt=""/>
-    <h3 class="FoundersComponent--name">Alex Foster</h3>
-    <h4 class="FoundersComponent--title">COO</h4>
-    <div class="FoundersComponent--socialicons__container">
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    <img class="FoundersComponent--socialicons__icons" src="./../../assets/linkedin-icon.png" alt=""/>
-    </div>
-    </div>
-    </div>
+      <h2 class="FoundersComponent--header">From the Founders</h2>
+      <div class="FoundersComponent--container">
+        <Founder
+          name="Dan Foster"
+          position="CEO"
+          instagram="#"
+          twitter="#"
+          facebook="#"
+        />
+        <Founder
+          name="James Foster"
+          position="COO"
+          instagram="#"
+          twitter="#"
+          facebook="#"
+        />
+        <Founder
+          name="Pete Foster"
+          position="CTO"
+          instagram="#"
+          twitter="#"
+          facebook="#"
+        />
+      </div>
+      <p class="FoundersComponent--text">
+        In our final year of university, we noticed that business' recruitment strategies were failing to reach students in an effective way. So we set out to find a solution, which led us to Groundworks. Our way to revolutionise how companies connect with students worldwide.
+      </p>
+      <button class="FoundersComponent--joinbutton">
+        Join
+      </button>
     </div>
   )
 }
