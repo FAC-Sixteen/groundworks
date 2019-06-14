@@ -1,5 +1,7 @@
 import React from "react";
 import "./normalize.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import Join from "./routes/Join";
@@ -9,7 +11,7 @@ import StudentDashboard from "./routes/StudentDashboard";
 import ClientDashboard from "./routes/ClientDashboard";
 import NewBrief from "./routes/NewBrief";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 const App = () => {
   return (

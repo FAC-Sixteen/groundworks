@@ -9,7 +9,16 @@ module.exports = {
     filename: "bundle.js", // setting name of bundle file.
     publicPath: '/' //required for React router
   },
+  eslint: {
+    emitError: true,
+    emitWarning: true,
+    failOnError: true,
+    failOnWarning: true
+  },
   module: {
+    preLoaders: [
+      { test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader"}
+    ],
     rules: [
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ["babel-loader"] }, // It enables use of these dependencies with these langauges / files
       { test: /\.css$/, use: ["style-loader", "css-loader"] } // It enables use of these dependencies with these langauges / files
@@ -23,7 +32,7 @@ module.exports = {
     historyApiFallback: true, //goes back to hompage if uncaught exception, also required for React Router
     port: 3000, // Port for the front end.
     contentBase: "src/",
-    compress: true, // compresses thr file
+    compress: true, // compresses the file
     hot: true, //auto reload.
     https: false,
     proxy: {
