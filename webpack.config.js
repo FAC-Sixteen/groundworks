@@ -1,12 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // Connect bundle.js to index.html file is dist.
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: ["babel-polyfill", "./index.js"], // The entry point for whole app.
   output: {
     // Here we are telling it where to build when we call Yarn run build
     path: path.resolve(__dirname, "./dist"),
-    filename: "bundle.js", // setting name of bundle file.
+    filename: "[name].[hash].js", // setting name of bundle file.
     publicPath: '/' //required for React router
   },
   module: {
@@ -38,5 +39,7 @@ module.exports = {
       }
     }
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })] // Connect bundle.js to index.html file is dist.
+  plugins: [
+    new CleanWebpackPlugin(),   //deletes dist folder before each run or build
+    new HtmlWebpackPlugin({ template: "./public/index.html" })] // Connect bundle.js to index.html file is dist.
 };
