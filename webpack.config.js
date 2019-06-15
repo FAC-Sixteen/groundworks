@@ -1,24 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // Connect bundle.js to index.html file is dist.
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: ["babel-polyfill", "./index.js"], // The entry point for whole app.
   output: {
     // Here we are telling it where to build when we call Yarn run build
     path: path.resolve(__dirname, "./dist"),
-    filename: "bundle.js", // setting name of bundle file.
+    filename: "[name].[hash].js", // setting name of bundle file.
     publicPath: '/' //required for React router
   },
-  eslint: {
-    emitError: true,
-    emitWarning: true,
-    failOnError: true,
-    failOnWarning: true
-  },
   module: {
-    preLoaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader"}
-    ],
     rules: [
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ["babel-loader"] }, // It enables use of these dependencies with these langauges / files
       { test: /\.css$/, use: ["style-loader", "css-loader"] } // It enables use of these dependencies with these langauges / files
@@ -32,7 +24,7 @@ module.exports = {
     historyApiFallback: true, //goes back to hompage if uncaught exception, also required for React Router
     port: 3000, // Port for the front end.
     contentBase: "src/",
-    compress: true, // compresses the file
+    compress: true, // compresses thr file
     hot: true, //auto reload.
     https: false,
     proxy: {
@@ -47,5 +39,7 @@ module.exports = {
       }
     }
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })] // Connect bundle.js to index.html file is dist.
+  plugins: [
+    new CleanWebpackPlugin(),   //deletes dist folder before each run or build
+    new HtmlWebpackPlugin({ template: "./public/index.html" })] // Connect bundle.js to index.html file is dist.
 };
