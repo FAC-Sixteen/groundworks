@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // Connect bundle.js to index.html file is dist.
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -23,7 +24,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true, //goes back to hompage if uncaught exception, also required for React Router
     port: 3000, // Port for the front end.
-    contentBase: "src/",
+    contentBase: "/src",
     compress: true, // compresses thr file
     hot: true, //auto reload.
     https: false,
@@ -41,5 +42,12 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),   //deletes dist folder before each run or build
-    new HtmlWebpackPlugin({ template: "./public/index.html" })] // Connect bundle.js to index.html file is dist.
+    new miniCssExtractPlugin({
+      filename: 'style.[contenthash].css'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: "./public/index.html",
+      filename: 'index.html'})] // Connect bundle.js to index.html file is dist.
 };
