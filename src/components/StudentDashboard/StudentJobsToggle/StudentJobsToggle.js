@@ -26,9 +26,24 @@ const StudentJobsToggle = () => {
 
   return (
     <div className="StudentJobsToggle--container">
-      <div className={grey1 ? "grey1" : "StudentJobsToggle--div1"} onClick={change1}>New</div>
-      <div className={grey2 ? "grey2" : "StudentJobsToggle--div2"} onClick={change2}>Live</div>
-      <div className={grey3 ? "grey3" : "StudentJobsToggle--div3"} onClick={change3}>Completed</div>
+      <div
+        className={grey1 ? "grey1" : "StudentJobsToggle--div1"}
+        onClick={change1}
+      >
+        New
+      </div>
+      <div
+        className={grey2 ? "grey2" : "StudentJobsToggle--div2"}
+        onClick={change2}
+      >
+        Live
+      </div>
+      <div
+        className={grey3 ? "grey3" : "StudentJobsToggle--div3"}
+        onClick={change3}
+      >
+        Completed
+      </div>
     </div>
   );
 };

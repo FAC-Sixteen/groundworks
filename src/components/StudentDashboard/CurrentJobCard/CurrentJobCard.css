@@ -1,0 +1,47 @@
+.StudentCurrentJobCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.StudentCurrentJobCard--projectname {
+  border-bottom: 2px solid black;
+  padding: 1rem;
+}
+
+.StudentCurrentJobCard--contactdetailsdiv {
+  width: 50%;
+  padding: 1rem;
+}
+
+.StudentCurrentJobCard--projectdetailsdiv {
+  width: 50%;
+  padding: 1rem;
+}
+
+.StudentCurrentJobCard--projectdesc {
+  padding: 1rem;
+}
+
+.StudentCurrentJobCard--container {
+  width: 600px;
+  height: auto;
+  border: 2px solid black;
+  margin: 1rem;
+  box-shadow: 2px 2px 10px grey;
+}
+
+.StudentCurrentJobCard--contactcontainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.StudentCurrentJobCard--downloadbrief {
+  border-top: 2px solid black;
+  text-align: right;
+  padding: 1rem;
+}
+
+.StudentCurrentJobCard--downloadbrief__name {
+  padding-right: 1rem;
+}
