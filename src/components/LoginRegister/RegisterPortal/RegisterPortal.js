@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { RegisterContext } from "./RegisterContext";
+import axios from "axios";
 import "./RegisterPortal.css";
 
 const RegisterPortal = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useContext(RegisterContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

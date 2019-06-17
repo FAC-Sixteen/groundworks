@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import StudentSignupForm from '../components/StudentSignupForm/StudentSignupForm'
+import StudentSignupForm from "../components/StudentSignupForm/StudentSignupForm";
+import { RegisterProvider } from "../components/LoginRegister/RegisterPortal/RegisterContext";
 
 const StudentSignup = () => {
   return (
-    <div>
-      <StudentSignupForm />
-    </div>
+    <RegisterProvider>
+      <div>
+        <StudentSignupForm />
+      </div>
+    </RegisterProvider>
   );
 };
 

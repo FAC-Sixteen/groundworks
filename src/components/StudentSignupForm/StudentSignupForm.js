@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./StudentSignupForm.css";
 import axios from "axios";
+import { RegisterContext } from "../LoginRegister/RegisterPortal/RegisterContext";
 
 function StudentSignupForm() {
+  const [name, setName] = useContext(RegisterContext);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
