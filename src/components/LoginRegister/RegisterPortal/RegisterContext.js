@@ -1,13 +1,5 @@
-import React, { useState, createContext } from "react";
+import React, { createContext } from "react";
 
-export const RegisterContext = createContext();
+const RegisterContext = createContext();
 
-export const RegisterProvider = props => {
-  console.log("here", props);
-  const [name, setName] = useState("");
-  return (
-    <RegisterContext.Provider value={[name, setName]}>
-      {this.props.children}
-    </RegisterContext.Provider>
-  );
-};
+export { RegisterContext as default };
