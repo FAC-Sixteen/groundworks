@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./LongStudentProfileCard.css";
-import AcceptDecline from "../../AccectDeclineButtons/AcceptDecline.js";
 import axios from "axios";
+import "./LongStudentProfileCard.css";
+import AcceptDecline from "../../AccectDeclineButtons/AcceptDecline";
 
 const LongStudentProfileCard = () => {
   const [data, setData] = useState([]);
@@ -11,7 +11,6 @@ const LongStudentProfileCard = () => {
       const result = await axios(
         "/api/student/get-student/5d0783ded1ea443e7621cc88"
       );
-      console.log(result.data);
       setData(result.data);
     };
     fetchData();
