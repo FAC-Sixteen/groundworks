@@ -3,7 +3,16 @@ import "./ClientSignupForm.css";
 import axios from "axios";
 
 const ClientSignupForm = () => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+    jobTitle: "",
+    companyName: "",
+    companyUrl: ""
+  });
 
   const handleChange = event => {
     setData({
@@ -17,14 +26,23 @@ const ClientSignupForm = () => {
 
     const addClient = async () => {
       console.log(`Fake data: ${data}`);
-      // try {
-      //   return await axios.post("/api/client/sign-up", data);
-      // } catch (error) {
-      //   console.log(error);
-      // }
+      try {
+        return await axios.post("/api/client/sign-up", data);
+      } catch (error) {
+        console.error(error);
+      }
     };
     addClient();
-    setData("");
+    setData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      phoneNumber: "",
+      jobTitle: "",
+      companyName: "",
+      companyUrl: ""
+    });
   };
   return (
     <div>
