@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ClientProfileCard.css";
 
-const ClientProfileCard = ({ name, company, jobtitle }) => {
+const ClientProfileCard = () => {
   const [profile, setProfile] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,6 @@ const ClientProfileCard = ({ name, company, jobtitle }) => {
       console.log(result.data);
       setProfile(result.data);
     }
-
     fetchData();
   }, []);
 
