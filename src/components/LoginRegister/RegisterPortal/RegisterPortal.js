@@ -1,24 +1,38 @@
-import React, { useState, useContext } from "react";
-import axios from "axios";
-// import { RegisterContext } from "./RegisterContext";
-// import Register from './Register';
+import React, { useState } from "react";
 import "./RegisterPortal.css";
 
 const RegisterPortal = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log(name, email, password);
-    const [name, setName] = useContext(RegisterContext);
   };
 
   return (
     <div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form
+        className="form"
+        onSubmit={handleSubmit}
+        action="/api/"
+        method="post"
+      >
         <h1 className="form--el form--title">Welcome to Groundworks.</h1>
         <p className="form--subtitle">Enter details below.</p>
+
+        <fieldset id="user-type">
+          <label htmlFor="student">
+            Student
+            <input type="radio" value="student" name="user-type" />
+          </label>
+          <label htmlFor="client">
+            Client
+            <input type="radio" value="client" name="user-type" />
+          </label>
+        </fieldset>
+
         <h2 className="form--el form--input__title">Name</h2>
         <input
           className="form--el input"
