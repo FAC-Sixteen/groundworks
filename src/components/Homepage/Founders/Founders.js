@@ -1,12 +1,12 @@
 import React from 'react';
 import "./Founders.css";
-import Founder from "./Founder/Founder.js"
+import Founder from "./Founder/Founder"
 
 const Founders = () => {
   return (
-    <div class="FoundersComponent">
-      <h2 class="FoundersComponent--header">From the Founders</h2>
-      <div class="FoundersComponent--container">
+    <div className="FoundersComponent">
+      <h2 className="FoundersComponent--header">From the Founders</h2>
+      <div className="FoundersComponent--container">
         <Founder
           name="Dan Foster"
           position="CEO"
@@ -29,10 +29,10 @@ const Founders = () => {
           facebook="#"
         />
       </div>
-      <p class="FoundersComponent--text">
+      <p className="FoundersComponent--text">
         In our final year of university, we noticed that business' recruitment strategies were failing to reach students in an effective way. So we set out to find a solution, which led us to Groundworks. Our way to revolutionise how companies connect with students worldwide.
       </p>
-      <button class="FoundersComponent--joinbutton">
+      <button className="FoundersComponent--joinbutton">
         Join
       </button>
     </div>

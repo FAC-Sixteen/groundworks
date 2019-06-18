@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
-import { RegisterContext } from "./RegisterContext";
 import axios from "axios";
+// import { RegisterContext } from "./RegisterContext";
+// import Register from './Register';
 import "./RegisterPortal.css";
 
 const RegisterPortal = () => {

@@ -1,10 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./StudentSignupForm.css";
 import axios from "axios";
-import { RegisterContext } from "../LoginRegister/RegisterPortal/RegisterContext";
 
 function StudentSignupForm() {
-  const [name, setName] = useContext(RegisterContext);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -53,6 +51,7 @@ function StudentSignupForm() {
 
   return (
     <div>
+      <h1>{name.name}</h1>
       <form className="SignupForm" onSubmit={handleSubmit}>
         <fieldset className="Signup--Fieldset">
           <legend>Student Signup</legend>
