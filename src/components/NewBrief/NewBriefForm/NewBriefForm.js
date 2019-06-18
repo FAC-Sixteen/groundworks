@@ -3,7 +3,17 @@ import "./NewBriefForm.css";
 import axios from "axios";
 
 const ClientNewBriefForm = () => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState({
+    companyName: "",
+    contactPerson: "",
+    projectName: "",
+    projectBrief: "",
+    projectDeadline: "",
+    estimatedWorkload: "",
+    projectPrice: "",
+    studentSkills: "",
+    additionalInfo: ""
+  });
 
   const handleChange = event => {
     setData({
@@ -15,98 +25,149 @@ const ClientNewBriefForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    const addClient = async () => {
-      console.log(`Fake data: ${data}`);
+    const addBrief = async () => {
+      console.log(`Fake submitting: ${data}`);
       try {
-        return await axios.post("/api/client/sign-up", data);
+        return await axios.post("/api/client/new-brief", data);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
-    addClient();
-    setData("");
+    addBrief();
+    setData({
+      companyName: "",
+      contactPerson: "",
+      projectName: "",
+      projectBrief: "",
+      projectDeadline: "",
+      estimatedWorkload: "",
+      projectPrice: "",
+      studentSkills: "",
+      additionalInfo: ""
+    });
   };
   return (
     <div>
       <form className="NewBriefForm" onSubmit={handleSubmit}>
         <fieldset className="NewBrief--Fieldset">
           <legend>Client NewBrief</legend>
-          <div className="NewBrief--CompanyInfo">
-            <div className="NewBrief--CompanyInfo__leftdiv">
-              <h4>Company Name</h4>
-              <h4>Company Location</h4>
-              <h4>Company Sector</h4>
-            </div>
-            <div className="NewBrief--CompanyInfo__rightdiv">
-              <h4>Contact Name</h4>
-              <h4>Contact Email Address</h4>
-              <h4>Contact Number</h4>
-            </div>
-          </div>
           <div className="NewBrief--div-p1">
+            <h2>Company Information</h2>
+            <div className="NewBrief--row">
+              <label className="NewBrief-label" htmlFor="companyName">
+                Company Name:
+                <input
+                  className="NewBrief--input"
+                  id="companyName"
+                  type="text"
+                  name="companyName"
+                  value={data.companyName}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="NewBrief--row">
+              <label className="NewBrief-label" htmlFor="contactPerson">
+                Contact Person:
+                <input
+                  className="NewBrief--input"
+                  id="contactPerson"
+                  type="text"
+                  name="contactPerson"
+                  value={data.contactPerson}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
             <h2>Project Information</h2>
             <div className="NewBrief--row">
-              <label className="NewBrief-label" htmlFor="firstName">
-                Project Title:
+              <label className="NewBrief-label" htmlFor="projectName">
+                Project Name:
                 <input
                   className="NewBrief--input"
-                  id="firstName"
+                  id="projectName"
                   type="text"
-                  name="firstName"
-                  value={data.firstName}
+                  name="projectName"
+                  value={data.projectName}
                   onChange={handleChange}
                 />
               </label>
             </div>
             <div className="NewBrief--row">
-              <label className="NewBrief--label" htmlFor="lastName">
-                Project Description:
+              <label className="NewBrief--label" htmlFor="briefUpload">
+                Project Brief:
                 <input
                   className="NewBrief--input"
                   type="text"
-                  name="lastName"
-                  id="lastName"
-                  value={data.lastName}
+                  name="projectBrief"
+                  id="projectBrief"
+                  value={data.projectBrief}
                   onChange={handleChange}
                 />
               </label>
             </div>
             <div className="NewBrief--row">
-              <label className="NewBrief--label" htmlFor="email">
-                Brief Link Upload:
+              <label className="NewBrief--label" htmlFor="projectDeadline">
+                Project Deadline:
                 <input
                   className="NewBrief--input"
-                  id="email"
                   type="text"
-                  name="email"
-                  value={data.email}
+                  name="projectDeadline"
+                  id="projectDeadline"
+                  value={data.projectDeadline}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="NewBrief--row">
+              <label className="NewBrief--label" htmlFor="estimatedWorkload">
+                Estimated Workload
+                <input
+                  className="NewBrief--input"
+                  id="estimatedWorkload"
+                  type="text"
+                  name="estimatedWorkload"
+                  value={data.estimatedWorkload}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="NewBrief--row">
+              <label className="NewBrief--label" htmlFor="projectPrice">
+                Project Price
+                <input
+                  className="NewBrief--input"
+                  id="projectPrice"
+                  type="text"
+                  name="projectPrice"
+                  value={data.projectPrice}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div className="NewBrief--row">
+              <label className="NewBrief--label" htmlFor="studentSkills">
+                Student Skills
+                <input
+                  className="NewBrief--input"
+                  id="studentSkills"
+                  type="text"
+                  name="studentSkills"
+                  value={data.studentSkills}
                   onChange={handleChange}
                 />
               </label>
             </div>
             <h2>Student Information</h2>
             <div className="NewBrief--row">
-              <label className="NewBrief--label" htmlFor="password">
-                Required Skills:
+              <label className="NewBrief--label" htmlFor="additionalInfo">
+                Additional Info
                 <input
                   className="NewBrief--input"
-                  id="password"
+                  id="additionalInfo"
                   type="text"
-                  name="sectors"
-                  value={data.password}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-            <div className="NewBrief--row">
-              <label className="NewBrief--label" htmlFor="sectors">
-                Sectors:
-                <input
-                  className="NewBrief--input"
-                  id="sectors"
-                  type="text"
-                  name="sectors"
-                  value={data.sectors}
+                  name="additionalInfo"
+                  value={data.additionalInfo}
                   onChange={handleChange}
                 />
               </label>
