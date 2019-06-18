@@ -4,15 +4,19 @@ import ShortStudentProfileCard from "../components/StudentDashboard/ShortStudent
 import StudentCompletedJobCard from "../components/StudentDashboard/CompletedJobCard/StudentCompletedJobCard";
 import StudentCurrentJobCard from "../components/StudentDashboard/CurrentJobCard/CurrentJobCard";
 import NewJobCard from "../components/StudentDashboard/NewJobCard/NewJobCard";
+import NavBar from "../components/Navbar/NavBar";
+import Footer from "../components/Footer/Footer";
 
 const StudentDashboard = () => {
   return (
     <div>
+      <NavBar />
       <ShortStudentProfileCard />
       <StudentJobsToggle />
       <StudentCompletedJobCard />
       <StudentCurrentJobCard />
       <NewJobCard />
+      <Footer />
     </div>
   );
 };

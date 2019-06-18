@@ -1,4 +1,15 @@
 .infoComponent {
   text-align: center;
-  background-color: rgba(246, 250, 254, 1);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.infoComponent--header {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.infoComponent--paragraph {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
