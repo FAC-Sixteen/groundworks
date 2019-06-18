@@ -26,7 +26,6 @@ const ClientSignupForm = () => {
 
     const addClient = async () => {
       console.log(`Fake data: ${data}`);
-
       try {
         return await axios.post("/api/client/sign-up", data);
       } catch (error) {
