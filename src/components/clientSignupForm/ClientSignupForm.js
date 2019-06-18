@@ -16,12 +16,12 @@ const ClientSignupForm = () => {
     event.preventDefault();
 
     const addClient = async () => {
-      console.log(`Fake shit: ${data}`);
-      try {
-        return await axios.post("/api/client/sign-up", data);
-      } catch (error) {
-        console.log(error);
-      }
+      console.log(`Fake data: ${data}`);
+      // try {
+      //   return await axios.post("/api/client/sign-up", data);
+      // } catch (error) {
+      //   console.log(error);
+      // }
     };
     addClient();
     setData("");
