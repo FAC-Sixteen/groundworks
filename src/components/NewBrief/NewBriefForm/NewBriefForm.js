@@ -16,7 +16,7 @@ const ClientNewBriefForm = () => {
     event.preventDefault();
 
     const addClient = async () => {
-      console.log(`Fake shit: ${data}`);
+      console.log(`Fake data: ${data}`);
       try {
         return await axios.post("/api/client/sign-up", data);
       } catch (error) {

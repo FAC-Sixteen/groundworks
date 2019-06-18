@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./LoginPortal.css";
+import LoginContext from './LoginContext';
 
 const LoginPortal = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [newEmail, setEmail] = useState("");
+  const [newPassword, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(email, password);
+    console.log(details);
+    console.log(newEmail, newPassword);
+
+    const [details, setDetails] = useContext(LoginContext);  //moved inside submit function
+
+
+    setDetails(details => [{email: newEmail, password: newPassword}])
+    console.log(details)
   };
 
   return (
