@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./Founder.css";
 
-const Founder = (props) => {
+const Founder = props => {
   return (
     <div className="FounderComponent">
-      <img className="FounderComponent--portraitphoto" src="./../../assets/portrait-photo.png" alt=""/>
+      <img
+        className="FounderComponent--portraitphoto"
+        src="./../../assets/portrait-photo.png"
+        alt=""
+      />
       <h3 className="FounderComponent--name">{props.name}</h3>
       <h4 className="FounderComponent--title">{props.position}</h4>
       <div className="FounderComponent--socialicons__container">
@@ -31,7 +35,7 @@ const Founder = (props) => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Founder;
