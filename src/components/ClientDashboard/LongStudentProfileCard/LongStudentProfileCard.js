@@ -1,28 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./LongStudentProfileCard.css";
 import AcceptDecline from "../../AccectDeclineButtons/AcceptDecline.js";
+import axios from "axios";
 
 const LongStudentProfileCard = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        "/api/student/get-student/5d0783ded1ea443e7621cc88"
+      );
+      console.log(result.data);
+      setData(result.data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="LongStudentProfileCard--main">
       <div className="LongStudentProfileCard">
         <div className="LongStudentProfileCard--container">
-          <h2 className="LongStudentProfileCard--projectname">Student Name</h2>
+          <h2 className="LongStudentProfileCard--projectname">
+            Student Name: {data.firstName}
+            {data.lastName}
+          </h2>
           <p className="LongStudentProfileCard--projectdesc">
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-            Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-            Lorem Ipsum
+            About Myself: {data.aboutYou}
           </p>
           <div className="LongStudentProfileCard--contactcontainer">
             <div className="LongStudentProfileCard--contactdetailsdiv">
-              <h4>Student Email</h4>
-              <h4>Student Phone</h4>
-              <h4>Student Linkedin</h4>
+              <h4>Email: {data.email}</h4>
+              <h4>Phone: {data.phoneNumber}</h4>
+              <h4>Linkedin: {data.LinkedinURL}</h4>
             </div>
             <div className="LongStudentProfileCard--projectdetailsdiv">
-              <h4>University name</h4>
-              <h4>Location</h4>
-              <h4>Year of Study</h4>
+              <h4>University: {data.university}</h4>
+              <h4>Course Studied: {data.courseStudied}</h4>
+              <h4>Year of Study: {data.yearOfStudy}</h4>
             </div>
           </div>
           <div className="LongStudentProfileCard--downloadbrief">
