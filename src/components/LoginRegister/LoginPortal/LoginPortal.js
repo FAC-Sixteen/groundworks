@@ -13,7 +13,6 @@ const LoginPortal = () => {
 
     const [details, setDetails] = useContext(LoginContext);  //moved inside submit function
 
-
     setDetails(details => [{email: newEmail, password: newPassword}])
     console.log(details)
   };

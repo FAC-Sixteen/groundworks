@@ -5,13 +5,13 @@ import axios from "axios";
 import "./RegisterPortal.css";
 
 const RegisterPortal = () => {
-  // const [name, setName] = useContext(RegisterContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log(name, email, password);
+    const [name, setName] = useContext(RegisterContext);
   };
 
   return (
