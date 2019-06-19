@@ -20,7 +20,7 @@ const StudentCurrentJobCard = props => {
               <div className="StudentCurrentJobCard">
                 <div className="StudentCurrentJobCard--container">
                   <h2 className="StudentCurrentJobCard--projectname">
-                    Project Name: {value.projectName}
+                    Current Project Name: {value.projectName}
                   </h2>
                   <p className="StudentCurrentJobCard--projectdesc">
                     Project Brief: {value.projectBrief}
