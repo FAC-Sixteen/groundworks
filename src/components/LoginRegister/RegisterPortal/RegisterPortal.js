@@ -6,17 +6,17 @@ const RegisterPortal = () => {
   const [user, setUser] = useState("");
 
   const [data, setData] = useState({
-    name: "",
+    userName: "",
     email: "",
     password: "",
-    usertype: ""
+    userType: ""
   });
 
   const handleChange = event => {
     setData({
       ...data,
       [event.target.name]: event.target.value,
-      usertype: user
+      userType: user
     });
   };
 
@@ -35,9 +35,10 @@ const RegisterPortal = () => {
     };
     addRegister();
     setData({
-      name: "",
+      userName: "",
       email: "",
-      password: ""
+      password: "",
+      userType: ""
     });
   };
 
@@ -58,7 +59,7 @@ const RegisterPortal = () => {
             <input
               type="radio"
               value="student"
-              name="user-type"
+              name="userType"
               onChange={() => setUser("student")}
             />
           </label>
@@ -67,7 +68,7 @@ const RegisterPortal = () => {
             <input
               type="radio"
               value="client"
-              name="user-type"
+              name="userType"
               onChange={() => setUser("client")}
             />
           </label>
@@ -78,8 +79,8 @@ const RegisterPortal = () => {
           className="form--el input"
           type="text"
           onChange={handleChange}
-          name="name"
-          value={data.name}
+          name="userName"
+          value={data.userName}
         />
         <h2 className="form--el form--input__title">Email</h2>
         <input
