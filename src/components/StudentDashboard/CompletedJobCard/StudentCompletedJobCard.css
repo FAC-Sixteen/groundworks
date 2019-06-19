@@ -45,3 +45,11 @@
 .StudentCompletedJobCard--downloadbrief__name {
   padding-right: 1rem;
 }
+
+.hidden {
+  display: none;
+}
+
+.showing {
+  display: block;
+}

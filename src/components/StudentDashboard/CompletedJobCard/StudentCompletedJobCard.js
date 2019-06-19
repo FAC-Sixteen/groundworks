@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./StudentCompletedJobCard.css";
 import axios from "axios";
 
-const StudentCompletedJobCard = () => {
+const StudentCompletedJobCard = props => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +12,7 @@ const StudentCompletedJobCard = () => {
     fetchData();
   }, []);
   return (
-    <ul>
+    <ul className={props.StudentCompletedJobCard ? "showing" : "hidden"}>
       {data.map((value, index) => {
         return (
           <li key={index}>
