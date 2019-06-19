@@ -9,7 +9,7 @@ const NavBar = () => {
         <li>
           <img
             className="NavBar--li__logo"
-            src="../../assets/groundworks-logo.png"
+            src="https://user-images.githubusercontent.com/30301023/59760468-54f51200-928a-11e9-8009-2ae607c498b5.png"
             alt="GroundWorks Logo"
           />
         </li>
