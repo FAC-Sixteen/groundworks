@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ClientCompletedJobCard.css";
 import axios from "axios";
 
-const ClientJobCard = () => {
+const ClientJobCard = props => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +12,7 @@ const ClientJobCard = () => {
     fetchData();
   }, []);
   return (
-    <ul>
+    <ul className={props.ClientCompletedJobCard ? "showing" : "hidden"}>
       {data.map((value, index) => {
         return (
           <li key={index}>
@@ -20,7 +20,7 @@ const ClientJobCard = () => {
               <div className="ClientJobCard">
                 <div className="ClientJobCard--container">
                   <h2 className="ClientJobCard--projectname">
-                    Project Name: {value.projectName}
+                    Completed Project Name: {value.projectName}
                   </h2>
                   <p className="ClientJobCard--projectdesc">
                     Project Brief: {value.projectBrief}

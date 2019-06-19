@@ -3,7 +3,7 @@ import axios from "axios";
 import "./LongStudentProfileCard.css";
 import AcceptDecline from "../../AccectDeclineButtons/AcceptDecline";
 
-const LongStudentProfileCard = () => {
+const LongStudentProfileCard = props => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -17,37 +17,39 @@ const LongStudentProfileCard = () => {
   }, []);
 
   return (
-    <div className="LongStudentProfileCard--main">
-      <div className="LongStudentProfileCard">
-        <div className="LongStudentProfileCard--container">
-          <h2 className="LongStudentProfileCard--projectname">
-            Student Name: {data.firstName}
-            {data.lastName}
-          </h2>
-          <p className="LongStudentProfileCard--projectdesc">
-            About Myself: {data.aboutYou}
-          </p>
-          <div className="LongStudentProfileCard--contactcontainer">
-            <div className="LongStudentProfileCard--contactdetailsdiv">
-              <h4>Email: {data.email}</h4>
-              <h4>Phone: {data.phoneNumber}</h4>
-              <h4>Linkedin: {data.LinkedinURL}</h4>
+    <div className={props.LongStudentProfileCard ? "showing" : "hidden"}>
+      <div className="LongStudentProfileCard--main">
+        <div className="LongStudentProfileCard">
+          <div className="LongStudentProfileCard--container">
+            <h2 className="LongStudentProfileCard--projectname">
+              Student Name: {data.firstName}
+              {data.lastName}
+            </h2>
+            <p className="LongStudentProfileCard--projectdesc">
+              About Myself: {data.aboutYou}
+            </p>
+            <div className="LongStudentProfileCard--contactcontainer">
+              <div className="LongStudentProfileCard--contactdetailsdiv">
+                <h4>Email: {data.email}</h4>
+                <h4>Phone: {data.phoneNumber}</h4>
+                <h4>Linkedin: {data.LinkedinURL}</h4>
+              </div>
+              <div className="LongStudentProfileCard--projectdetailsdiv">
+                <h4>University: {data.university}</h4>
+                <h4>Course Studied: {data.courseStudied}</h4>
+                <h4>Year of Study: {data.yearOfStudy}</h4>
+              </div>
             </div>
-            <div className="LongStudentProfileCard--projectdetailsdiv">
-              <h4>University: {data.university}</h4>
-              <h4>Course Studied: {data.courseStudied}</h4>
-              <h4>Year of Study: {data.yearOfStudy}</h4>
+            <div className="LongStudentProfileCard--downloadbrief">
+              <span className="LongStudentProfileCard--downloadbrief__name">
+                Curriculum Vitae
+              </span>
+              <button>Download</button>
             </div>
-          </div>
-          <div className="LongStudentProfileCard--downloadbrief">
-            <span className="LongStudentProfileCard--downloadbrief__name">
-              Curriculum Vitae
-            </span>
-            <button>Download</button>
           </div>
         </div>
+        <AcceptDecline />
       </div>
-      <AcceptDecline />
     </div>
   );
 };
