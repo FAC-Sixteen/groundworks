@@ -2,7 +2,7 @@ import React from "react";
 import "./NewJobCard.css";
 // import axios from "axios";
 
-const StudentNewJobCard = () => {
+const StudentNewJobCard = props => {
   //   const [data, setData] = useState([]);
 
   //   useEffect(() => {
@@ -15,8 +15,8 @@ const StudentNewJobCard = () => {
   //   }, []);
 
   return (
-    <div className="StudentNewJobCard">
-      <div className="StudentNewJobCard--container">
+    <ul className={props.StudentNewJobCard ? "showing" : "hidden"}>
+      <div className="StudentNewJobCard">
         <h2 className="StudentNewJobCard--projectname">Project Name:</h2>
         <p className="StudentNewJobCard--projectdesc">Project Brief:</p>
         <div className="StudentNewJobCard--contactcontainer">
@@ -38,7 +38,7 @@ const StudentNewJobCard = () => {
           <button>Download</button>
         </div>
       </div>
-    </div>
+    </ul>
   );
 };
 
