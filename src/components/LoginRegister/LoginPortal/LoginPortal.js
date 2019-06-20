@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./LoginPortal.css";
-import LoginContext from './LoginContext';
+import LoginContext from "./LoginContext";
 
 const LoginPortal = () => {
   const [newEmail, setEmail] = useState("");
@@ -11,10 +11,12 @@ const LoginPortal = () => {
     console.log(details);
     console.log(newEmail, newPassword);
 
-    const [details, setDetails] = useContext(LoginContext);  //moved inside submit function
+    const [details, setDetails] = useContext(LoginContext); //moved inside submit function
 
-    setDetails(details => [{email: newEmail, password: newPassword}])
-    console.log(details)
+    // props.history.push("/StudentDashboard");
+
+    setDetails(details => [{ email: newEmail, password: newPassword }]);
+    console.log(details);
   };
 
   return (

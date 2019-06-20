@@ -34,6 +34,9 @@ const RegisterPortal = () => {
       }
     };
     addRegister();
+
+    // props.history.push("/StudentDashboard");
+
     setData({
       userName: "",
       email: "",
