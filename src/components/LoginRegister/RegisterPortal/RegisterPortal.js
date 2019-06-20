@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import {withRouter} from 'react-router-dom'
 import "./RegisterPortal.css";
 import axios from "axios";
 
-const RegisterPortal = () => {
-  const [user, setUser] = useState("");
 
+const RegisterPortal = (props) => {
+  const [user, setUser] = useState("");
+  const [redirect, setRedirect] = useState(false);
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -22,13 +24,18 @@ const RegisterPortal = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setRedirect(!redirect);
     console.log(data);
     console.log(user);
-
+    console.log(props);
     const addRegister = async () => {
       console.log(`Fake submitting: ${data}`);
       try {
-        return await axios.post(`/api/${user}/join`, data);
+        const response = await axios.post(`/api/${user}/join`, data);
+        if(response.status === 200 ) // check if response status is ok
+        {props.history.push('/StudentSignup')
+          //success scenario
+        }
       } catch (error) {
         console.error(error);
       }
@@ -39,7 +46,13 @@ const RegisterPortal = () => {
       email: "",
       password: ""
     });
-  };
+  }
+
+  // render() {
+  //   if (redirect === true) {
+  //     return <Redirect to='/StudentSignup' />
+  //   }
+  // }
 
   return (
     <div>
@@ -108,4 +121,4 @@ const RegisterPortal = () => {
   );
 };
 
-export default RegisterPortal;
+export default withRouter(RegisterPortal);

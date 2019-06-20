@@ -9,10 +9,14 @@ const ClientNewBriefForm = () => {
     projectName: "",
     projectBrief: "",
     projectDeadline: "",
-    estimatedWorkload: "",
-    projectPrice: "",
+    estimatedWorkload: 0,
+    projectPrice: 0,
+    additionalInfo: "",
     studentSkills: "",
-    additionalInfo: ""
+    // jobClient: "5d08cff93136b6429a9c01eb",
+    client: "testing"
+    // jobType: "new"
+
   });
 
   const handleChange = event => {
@@ -43,7 +47,9 @@ const ClientNewBriefForm = () => {
       estimatedWorkload: "",
       projectPrice: "",
       studentSkills: "",
-      additionalInfo: ""
+      additionalInfo: "",
+      // jobType: "new",
+      client: "5d08cff93136b6429a9c01eb"
     });
   };
   return (
