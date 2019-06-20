@@ -44,7 +44,9 @@ const LongStudentProfileCard = props => {
               <span className="LongStudentProfileCard--downloadbrief__name">
                 Curriculum Vitae
               </span>
-              <button>Download</button>
+              <button className="LongStudentProfileCard--downloadbrief__button">
+                Download
+              </button>
             </div>
           </div>
         </div>
