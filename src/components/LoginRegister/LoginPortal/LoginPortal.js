@@ -20,7 +20,7 @@ const LoginPortal = () => {
   };
 
   return (
-    <div>
+    <div className="container--div">
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form--el form--title">Welcome to Groundworks.</h1>
         <p className="form--subtitle">Enter details below.</p>

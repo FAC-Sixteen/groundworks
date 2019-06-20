@@ -4,11 +4,7 @@ import "./Founder.css";
 const Founder = props => {
   return (
     <div className="FounderComponent">
-      <img
-        className="FounderComponent--portraitphoto"
-        src="https://user-images.githubusercontent.com/30301023/59760509-66d6b500-928a-11e9-8227-05c4cd4288db.png"
-        alt=""
-      />
+      <img className="FounderComponent--portraitphoto" src={props.src} alt="" />
       <h3 className="FounderComponent--name">{props.name}</h3>
       <h4 className="FounderComponent--title">{props.position}</h4>
       <div className="FounderComponent--socialicons__container">

@@ -19,7 +19,7 @@ const Ourplatform = () => {
         </div>
         <div className="OurplatformComponent--rightdiv__container">
           <img
-            src="https://user-images.githubusercontent.com/30301023/59760440-3db62480-928a-11e9-91c5-8d83f17ed450.png"
+            src="https://user-images.githubusercontent.com/33389104/59851740-50515c00-9365-11e9-881c-f118cf29c366.png"
             alt=""
           />
         </div>

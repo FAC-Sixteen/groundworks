@@ -59,7 +59,7 @@ const RegisterPortal = (props) => {
   // }
 
   return (
-    <div>
+    <div className="container--div">
       <form
         className="form"
         onSubmit={handleSubmit}
