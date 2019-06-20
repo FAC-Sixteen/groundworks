@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./LoginPortal.css";
-import LoginContext from './LoginContext';
+import LoginContext from "./LoginContext";
 
 const LoginPortal = () => {
   const [newEmail, setEmail] = useState("");
@@ -11,14 +11,14 @@ const LoginPortal = () => {
     console.log(details);
     console.log(newEmail, newPassword);
 
-    const [details, setDetails] = useContext(LoginContext);  //moved inside submit function
+    const [details, setDetails] = useContext(LoginContext); //moved inside submit function
 
-    setDetails(details => [{email: newEmail, password: newPassword}])
-    console.log(details)
+    setDetails(details => [{ email: newEmail, password: newPassword }]);
+    console.log(details);
   };
 
   return (
-    <div>
+    <div className="container--div">
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form--el form--title">Welcome to Groundworks.</h1>
         <p className="form--subtitle">Enter details below.</p>

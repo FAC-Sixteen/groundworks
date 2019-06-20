@@ -1,17 +1,16 @@
 .testimonials {
   text-align: center;
-  margin: 0 auto;
-  width: 80%;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  background-color: #f4c434;
+  padding: 3rem;
+  line-height: 2;
 }
-
-.testimonials--paragraph {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
 .testimonials--span {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.testimonials--img {
+  height: 3rem;
+  width: auto;
+  margin: 0 1rem 1rem 1rem;
 }

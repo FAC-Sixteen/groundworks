@@ -1,7 +1,7 @@
 .FounderComponent {
- text-align: center;
- padding: 0rem 2rem 0rem 2rem;
- margin: 10px 20px;
+  text-align: center;
+  padding: 0rem 2rem 0rem 2rem;
+  margin: 10px 20px;
 }
 
 .FounderComponent--portraitphoto {
@@ -13,7 +13,7 @@
 
 .FounderComponent--socialicons__icons {
   height: 1.5rem;
-  width: 1.5rem;
+  width: auto;
   margin: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
