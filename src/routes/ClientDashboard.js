@@ -3,13 +3,16 @@ import ClientJobsToggle from "../components/ClientDashboard/ClientJobsToggle/Cli
 import ClientProfileCard from "../components/ClientDashboard/ClientProfileCard/ClientProfileCard";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer/Footer";
+import "./css/allPages.css";
 
 const ClientDashboard = () => {
   return (
     <div>
       <NavBar />
-      <ClientProfileCard />
-      <ClientJobsToggle />
+      <div className="fullViewportHeight">
+        <ClientProfileCard />
+        <ClientJobsToggle />
+      </div>
       <Footer />
     </div>
   );

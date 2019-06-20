@@ -1,6 +1,11 @@
 import React from "react";
 import "./Founders.css";
 import Founder from "./Founder/Founder";
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+
+>>>>>>> master
 
 const Founders = () => {
   return (
@@ -38,8 +43,16 @@ const Founders = () => {
         out to find a solution, which led us to Groundworks. Our way to
         revolutionise how companies connect with students worldwide.
       </p>
+<<<<<<< HEAD
 
       <button className="FoundersComponent--joinbutton">Join</button>
+=======
+      <Link to='/Join'>
+      <button className="FoundersComponent--joinbutton">
+        Join
+      </button>
+      </Link>
+>>>>>>> master
     </div>
   );
 };

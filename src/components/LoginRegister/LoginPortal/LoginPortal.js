@@ -13,6 +13,8 @@ const LoginPortal = () => {
 
     const [details, setDetails] = useContext(LoginContext); //moved inside submit function
 
+    // props.history.push("/StudentDashboard");
+
     setDetails(details => [{ email: newEmail, password: newPassword }]);
     console.log(details);
   };
