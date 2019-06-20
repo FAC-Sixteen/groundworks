@@ -6,13 +6,15 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <ul className="NavBar--ul">
-        <li>
-          <img
-            className="NavBar--li__logo"
-            src="https://user-images.githubusercontent.com/30301023/59760468-54f51200-928a-11e9-8009-2ae607c498b5.png"
-            alt="GroundWorks Logo"
-          />
-        </li>
+        <Link to={"/"}>
+          <li>
+            <img
+              className="NavBar--li__logo"
+              src="https://user-images.githubusercontent.com/30301023/59760468-54f51200-928a-11e9-8009-2ae607c498b5.png"
+              alt="GroundWorks Logo"
+            />
+          </li>
+        </Link>
         <li className="NavBar--li">
           <Link to={"/Join"} className="NavBar--li__a NavBar--joinbutton">
             Join

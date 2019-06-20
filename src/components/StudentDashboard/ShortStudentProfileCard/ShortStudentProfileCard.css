@@ -4,9 +4,9 @@
 }
 
 .StudentProfileCard--container {
-  border: 2px solid black;
+  border: 2px solid lightgrey;
   border-radius: 6px;
-  background-color: lightgrey;
+  background-color: rgba(200, 200, 200, 0.5);
   width: 10rem;
   height: auto;
   display: flex;
@@ -18,14 +18,18 @@
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
+  margin: 1rem;
 }
 
 .StudentProfileCard--editbutton__container {
   width: 100%;
   display: flex;
+  justify-content: flex-end;
 }
 
 .StudentProfileCard--editbutton {
-  display: flex;
-  justify-content: flex-end;
+  color: white;
+  background-color: orange;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
 }

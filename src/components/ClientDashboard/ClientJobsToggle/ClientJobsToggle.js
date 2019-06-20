@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./ClientJobsToggle.css";
+import ClientCompletedJobCard from "../CompletedJobCard/ClientCompletedJobCard.js";
+import ClientCurrentJobCard from "../CurrentJobCard/CurrentJobCard.js";
+import LongStudentProfileCard from "../LongStudentProfileCard/LongStudentProfileCard.js";
 
 const ClientJobsToggle = () => {
   const [grey1, setGrey1] = useState(false);
@@ -25,10 +28,30 @@ const ClientJobsToggle = () => {
   };
 
   return (
-    <div className="ClientJobsToggle--container">
-      <div className={grey1 ? "grey1" : "ClientJobsToggle--div1"} onClick={change1}>New</div>
-      <div className={grey2 ? "grey2" : "ClientJobsToggle--div2"} onClick={change2}>Live</div>
-      <div className={grey3 ? "grey3" : "ClientJobsToggle--div3"} onClick={change3}>Completed</div>
+    <div>
+      <div className="ClientJobsToggle--container">
+        <div
+          className={grey1 ? "grey1" : "ClientJobsToggle--div1"}
+          onClick={change1}
+        >
+          New
+        </div>
+        <div
+          className={grey2 ? "grey2" : "ClientJobsToggle--div2"}
+          onClick={change2}
+        >
+          Live
+        </div>
+        <div
+          className={grey3 ? "grey3" : "ClientJobsToggle--div3"}
+          onClick={change3}
+        >
+          Completed
+        </div>
+      </div>
+      <ClientCompletedJobCard ClientCompletedJobCard={grey3} />
+      <ClientCurrentJobCard ClientCurrentJobCard={grey2} />
+      <LongStudentProfileCard LongStudentProfileCard={grey1} />
     </div>
   );
 };

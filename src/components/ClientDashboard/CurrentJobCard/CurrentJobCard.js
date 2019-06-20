@@ -2,45 +2,53 @@ import React, { useState, useEffect } from "react";
 import "./CurrentJobCard.css";
 import axios from "axios";
 
-const ClientCurrentJobCard = () => {
+const ClientCurrentJobCard = props => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("api/client/all-briefs");
+      const result = await axios("/api/client/all-briefs");
       setData(result.data);
     };
     fetchData();
   }, []);
-  console.log("this is the project name", data[2]);
-  console.log("this is the number of briefs", Object.keys(data).length);
-
   return (
-    <div className="ClientCurrentJobCard">
-      <div className="ClientCurrentJobCard--container">
-        <h2 className="ClientCurrentJobCard--projectname">
-          Project Name: {data.projectName}{" "}
-        </h2>
-        <p className="ClientCurrentJobCard--projectdesc">this uno</p>
-        <div className="ClientCurrentJobCard--contactcontainer">
-          <div className="ClientCurrentJobCard--contactdetailsdiv">
-            <h4>Contact Email</h4>
-            <h4>Contact Email</h4>
-            <h4>Contact Email</h4>
-          </div>
-          <div className="ClientCurrentJobCard--projectdetailsdiv">
-            <h4>Price</h4>
-            <h4>Workload</h4>
-            <h4>Deadline</h4>
-          </div>
-        </div>
-        <div className="ClientCurrentJobCard--downloadbrief">
-          <span className="ClientCurrentJobCard--downloadbrief__name">
-            Brief File Name
-          </span>
-          <button>Download</button>
-        </div>
-      </div>
-    </div>
+    <ul className={props.ClientCurrentJobCard ? "showing" : "hidden"}>
+      {data.map((value, index) => {
+        return (
+          <li key={index}>
+            {
+              <div className="ClientCurrentJobCard">
+                <div className="ClientCurrentJobCard--container">
+                  <h2 className="ClientCurrentJobCard--projectname">
+                    Current Project Name: {value.projectName}
+                  </h2>
+                  <p className="ClientCurrentJobCard--projectdesc">
+                    Project Brief: {value.projectBrief}
+                  </p>
+                  <div className="ClientCurrentJobCard--contactcontainer">
+                    <div className="ClientCurrentJobCard--contactdetailsdiv">
+                      <h4>Company Name: {value.companyName}</h4>
+                      <h4>Contact Person: {value.contactPerson}</h4>
+                    </div>
+                    <div className="ClientCurrentJobCard--projectdetailsdiv">
+                      <h4>Project Price: {value.projectPrice}</h4>
+                      <h4>Estimated Workload: {value.estimatedWorkload}</h4>
+                      <h4>Project Deadline: {value.projectDeadline}</h4>
+                    </div>
+                  </div>
+                  <div className="ClientCurrentJobCard--downloadbrief">
+                    <span className="ClientCurrentJobCard--downloadbrief__name">
+                      Brief File Name
+                    </span>
+                    <button>Download</button>
+                  </div>
+                </div>
+              </div>
+            }
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 
