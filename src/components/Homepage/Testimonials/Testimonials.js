@@ -14,7 +14,7 @@ const Testimonials = () => {
         real-life work experience and a sense of career direction."
       </p>
       <span className="testimonials--span">
-        Steven, University of Briston, 2019
+        Steven, University of Bristol, 2019
       </span>
     </div>
   );
