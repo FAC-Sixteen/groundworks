@@ -20,20 +20,20 @@ const StudentNewJobCard = props => {
               <div className="StudentNewJobCard">
                 <div className="StudentNewJobCard--container">
                   <h2 className="StudentNewJobCard--projectname">
-                    Student Project Name: {value.projectName}
+                    {value.companyName}
                   </h2>
                   <p className="StudentNewJobCard--projectdesc">
-                    Project Brief: {value.projectBrief}
+                    Brief: {value.projectBrief}
                   </p>
                   <div className="StudentNewJobCard--contactcontainer">
                     <div className="StudentNewJobCard--contactdetailsdiv">
-                      <h4>Company Name: {value.companyName}</h4>
-                      <h4>Contact Person: {value.contactPerson}</h4>
+                      <h4>Project: {value.projectName}</h4>
+                      <h4>Contact: {value.contactPerson}</h4>
                     </div>
                     <div className="StudentNewJobCard--projectdetailsdiv">
-                      <h4>Project Price: {value.projectPrice}</h4>
-                      <h4>Estimated Workload: {value.estimatedWorkload}</h4>
-                      <h4>Project Deadline: {value.projectDeadline}</h4>
+                      <h4>Pay: {value.projectPrice}</h4>
+                      <h4>Hours: {value.estimatedWorkload}</h4>
+                      <h4>Due: {value.projectDeadline}</h4>
                     </div>
                   </div>
                   <div className="StudentNewJobCard--downloadbrief">

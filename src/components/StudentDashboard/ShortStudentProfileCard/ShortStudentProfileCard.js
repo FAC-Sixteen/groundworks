@@ -7,7 +7,7 @@ const ShortStudentProfileCard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("/api/student/get-student/5d0783ded1ea443e7621cc88");
+      const result = await axios("/api/student/get-student/5d0c022affa1b43f5cbb270e");
       console.log(result.data);
       setProfile(result.data);
     };
@@ -18,7 +18,7 @@ const ShortStudentProfileCard = () => {
   return (
     <div>
       <ShortStudentProfile
-        name={profile.firstName}
+        name={profile.userName}
         university={profile.university}
         year={profile.yearOfStudy}
         course={profile.courseStudied}
