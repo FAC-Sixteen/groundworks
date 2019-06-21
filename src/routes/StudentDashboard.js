@@ -13,7 +13,6 @@ const StudentDashboard = () => {
         <ShortStudentProfileCard />
         <StudentJobsToggle />
       </div>
-      <Footer />
     </div>
   );
 };
