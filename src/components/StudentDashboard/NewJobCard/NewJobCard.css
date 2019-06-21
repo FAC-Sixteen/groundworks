@@ -5,7 +5,7 @@
 }
 
 .StudentNewJobCard--projectname {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid lightgrey;
   padding: 1rem;
 }
 
@@ -26,9 +26,9 @@
 .StudentNewJobCard--container {
   width: 600px;
   height: auto;
-  border: 2px solid black;
+  border: 2px solid lightgrey;
   margin: 1rem;
-  box-shadow: 2px 2px 10px grey;
+  box-shadow: 2px 2px 10px lightgrey;
 }
 
 .StudentNewJobCard--contactcontainer {
@@ -37,7 +37,7 @@
 }
 
 .StudentNewJobCard--downloadbrief {
-  border-top: 2px solid black;
+  border-top: 2px solid lightgrey;
   text-align: right;
   padding: 1rem;
 }
