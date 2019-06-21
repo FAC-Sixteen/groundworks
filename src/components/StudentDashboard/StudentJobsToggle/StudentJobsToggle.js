@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./StudentJobsToggle.css";
-import StudentCompletedJobCard from "../CompletedJobCard/StudentCompletedJobCard.js";
-import StudentCurrentJobCard from "../CurrentJobCard/CurrentJobCard.js";
-import NewJobCard from "../NewJobCard/NewJobCard.js";
+import StudentCompletedJobCard from "../CompletedJobCard/StudentCompletedJobCard";
+import StudentCurrentJobCard from "../CurrentJobCard/CurrentJobCard";
+import NewJobCard from "../NewJobCard/NewJobCard";
 
 const StudentJobsToggle = () => {
-  const [grey1, setGrey1] = useState(false);
+  const [grey1, setGrey1] = useState(true);
   const [grey2, setGrey2] = useState(false);
   const [grey3, setGrey3] = useState(false);
 
