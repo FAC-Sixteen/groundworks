@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // Connect bundle.js to index.html file is dist.
-const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const miniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["babel-polyfill", "./index.js"], // The entry point for whole app.
@@ -9,7 +9,7 @@ module.exports = {
     // Here we are telling it where to build when we call Yarn run build
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].[hash].js", // setting name of bundle file.
-    publicPath: '/' //required for React router
+    publicPath: "/" //required for React router
   },
   module: {
     rules: [
@@ -41,13 +41,15 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(),   //deletes dist folder before each run or build
+    new CleanWebpackPlugin(), //deletes dist folder before each run or build
     new miniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: "style.[contenthash].css"
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: "./public/index.html",
-      filename: 'index.html'})] // Connect bundle.js to index.html file is dist.
+      filename: "index.html"
+    })
+  ] // Connect bundle.js to index.html file is dist.
 };
