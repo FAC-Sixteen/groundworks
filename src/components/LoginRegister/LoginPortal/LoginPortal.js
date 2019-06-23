@@ -1,45 +1,67 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./LoginPortal.css";
-import LoginContext from "./LoginContext";
+import { withRouter } from 'react-router-dom';
+import axios from "axios";
 
-const LoginPortal = () => {
-  const [newEmail, setEmail] = useState("");
-  const [newPassword, setPassword] = useState("");
+const LoginPortal = (props) => {
+  const [details, setDetails] = useState({ email: "", password: "" });
+  const [errorText, setText] = useState({text:"Please enter your information"});
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log(details);
-    console.log(newEmail, newPassword);
-
-    const [details, setDetails] = useContext(LoginContext); //moved inside submit function
-
-    // props.history.push("/StudentDashboard");
-
-    setDetails(details => [{ email: newEmail, password: newPassword }]);
-    console.log(details);
+  const handleChange = event => {
+    setDetails({...details, [event.target.name]: event.target.value})
   };
 
-  return (
-    <div className="container--div">
-      <form className="form" onSubmit={handleSubmit}>
-        <h1 className="form--el form--title">Welcome to Groundworks.</h1>
-        <p className="form--subtitle">Enter details below.</p>
-        <h2 className="form--el form--input__title">Email</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={e => setEmail({ email: e.target.value })}
-        />
-        <h2 className="form--el form--input__title">Password</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={e => setPassword({ password: e.target.value })}
-        />
-        <input className="form--button" type="submit" value="Login" />
-      </form>
-    </div>
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const validate = async () => {
+      try {
+        return await axios.post('/api/student/login', details)
+          .then(({data}) => {
+            setText({ text: data.msg })
+            if (data.success) {
+              props.history.push('/StudentDashboard');
+            }
+          })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    validate()
+  };
+
+  return ( <
+    div className="container--div">
+
+    <form className="form" onSubmit={handleSubmit}>
+
+    <h1 className="form--el form--title"> Welcome to Groundworks. </h1>
+    <p className="form--subtitle"> Enter details below. </p>
+    <h2 className="form--el form--input__title"> Email </h2>
+
+    <input className="form--el input" type="text" name="email"
+    value={details.email} onChange={handleChange} />
+    <h2 className="form--el form--input__title"> Password </h2> <
+    input className = "form--el input"
+    type = "text"
+    name = "password"
+    value = {
+      details.password
+    }
+    onChange = {
+      handleChange
+    }
+    /> <
+    h3 > {
+      errorText.text
+    } < /h3> <
+    input className = "form--button"
+    type = "submit"
+    value = "Login" / >
+    <
+    /form> <
+    /div>
   );
 };
 
-export default LoginPortal;
+export default withRouter(LoginPortal);

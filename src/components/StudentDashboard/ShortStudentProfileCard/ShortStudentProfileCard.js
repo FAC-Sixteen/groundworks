@@ -7,7 +7,7 @@ const ShortStudentProfileCard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("/api/student/get-student/5d0c022affa1b43f5cbb270e");
+      const result = await axios("/api/student/get-student/5d0eae4b3065ec1b9fc1a7e4");
       console.log(result.data);
       setProfile(result.data);
     };

@@ -17,9 +17,7 @@ function StudentSignupForm() {
   });
 
   const handleChange = event => {
-    setData({
-      ...data,
-      [event.target.name]: event.target.value
+    setData({...data,[event.target.name]: event.target.value
     }); //rest parameter adds to current state without replacing/deleting it
   }; //second param line 12 matches key-value pairs in state object line 6
 
