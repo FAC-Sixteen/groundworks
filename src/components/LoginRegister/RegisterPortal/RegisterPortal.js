@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import {withRouter} from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 import "./RegisterPortal.css";
 import axios from "axios";
 
-
-const RegisterPortal = (props) => {
+const RegisterPortal = props => {
   const [user, setUser] = useState("");
   const [data, setData] = useState({
     userName: "",
@@ -39,8 +38,9 @@ const RegisterPortal = (props) => {
       console.log(user);
       try {
         const response = await axios.post(`/api/${user}/sign-up`, data);
-        if(response.status === 200 ) // check if response status is ok
-        {props.history.push('/StudentDashboard')
+        if (response.status === 200) {
+          // check if response status is ok
+          props.history.push("/StudentDashboard");
           //success scenario
         }
       } catch (error) {
@@ -63,24 +63,32 @@ const RegisterPortal = (props) => {
       aboutYou: "",
       LinkedinURL: ""
     });
-  }
+  };
 
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form--el form--title">Welcome to Groundworks.</h1>
-        <p className="form--subtitle">Enter details below.</p>
+        <p className="form--subtitle">Register your details below.</p>
 
         <fieldset id="user-type">
           <label htmlFor="student">
             Student
-            <input type="radio" value="student" name="userType"
-              onChange={() => setUser("student")} />
+            <input
+              type="radio"
+              value="student"
+              name="userType"
+              onChange={() => setUser("student")}
+            />
           </label>
           <label htmlFor="client">
             Client
-            <input type="radio" value="client" name="userType"
-              onChange={() => setUser("client")} />
+            <input
+              type="radio"
+              value="client"
+              name="userType"
+              onChange={() => setUser("client")}
+            />
           </label>
         </fieldset>
 
