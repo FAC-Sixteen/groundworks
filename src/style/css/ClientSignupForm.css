@@ -1,0 +1,24 @@
+.Signup--Fieldset {
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.Signup--input {
+  float: right;
+  width: 50%;
+}
+
+.Signup--row {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.SignupForm--submit {
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=ClientSignupForm.css.map */

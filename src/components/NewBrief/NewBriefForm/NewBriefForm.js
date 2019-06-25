@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./NewBriefForm.css";
+import "../../../style/css/NewBriefForm.css";
 import axios from "axios";
 
 const ClientNewBriefForm = () => {
@@ -16,7 +16,6 @@ const ClientNewBriefForm = () => {
     // jobClient: "5d08cff93136b6429a9c01eb",
     client: "testing"
     // jobType: "new"
-
   });
 
   const handleChange = event => {

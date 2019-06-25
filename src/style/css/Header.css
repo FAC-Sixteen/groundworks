@@ -1,0 +1,78 @@
+.headerComponent {
+  display: flex;
+  /* background-color: rgba(235, 238, 252, 1); */
+  padding: 15vw;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+50,cec7ec+50,c1bfea+100 */
+  background: #ebe9f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 50%, #c1bfea 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 50%, #c1bfea 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 50%, #c1bfea 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ebe9f9", endColorstr="#c1bfea",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.headerComponent--student {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: -2vw;
+  top: -12vw;
+  width: 50vw;
+  /* font-size: 1vw; */
+}
+
+.headerComponent--employer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 4vw;
+  right: -18vw;
+  width: 50vw;
+  padding: 3rem;
+  /* font-size: 1vw; */
+}
+
+.headerComponent--headerStudent {
+  font-size: 2.5rem;
+  /* padding: 1vw; */
+  padding: 1rem 0 1rem 0;
+}
+
+.headerComponent--headerEmployers {
+  font-size: 2.5rem;
+  padding: 1rem 0 1rem 0;
+}
+
+.headerComponent--studentParagraph {
+  font-size: 1rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.headerComponent--employerParagraph {
+  font-size: 1rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.headercomponent--employer:after {
+  content: " ";
+  border-bottom: 100vh solid #e2e3fa;
+  border-left: 100vw solid transparent;
+  width: 0;
+  position: absolute;
+}
+
+@media only screen and (max-width: 530px) {
+  .headerComponent {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

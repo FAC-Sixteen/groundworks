@@ -1,0 +1,19 @@
+.testimonials {
+  text-align: center;
+  background-color: #f4c434;
+  padding: 3rem;
+  line-height: 2;
+}
+
+.testimonials--span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.testimonials--img {
+  height: 3rem;
+  width: auto;
+  margin: 0 1rem 1rem 1rem;
+}
+
+/*# sourceMappingURL=Testimonials.css.map */

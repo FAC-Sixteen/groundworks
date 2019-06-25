@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./ClientCompletedJobCard.css";
+import "../../../style/css/ClientCompletedJobCard.css";
 import axios from "axios";
 
 const ClientJobCard = props => {
