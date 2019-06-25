@@ -1,0 +1,48 @@
+.FoundersComponent {
+  /* margin: 15px 0px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgba(246, 250, 254, 1); */
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+99,cec7ec+100,c1bfea+100 */
+  background: #ebe9f9;
+  /* Old browsers */
+}
+
+.FoundersComponent--header {
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.FoundersComponent--container {
+  display: flex;
+  flex-direction: row;
+}
+
+.FoundersComponent--text {
+  max-width: 60em;
+  text-align: center;
+  font-size: 1em;
+  margin: 15px 0px;
+  line-height: 2;
+}
+
+.FoundersComponent--joinbutton {
+  color: white;
+  background-color: #f4c434;
+  border-radius: 30px;
+  padding: 14px 45px;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 530px) {
+  .FoundersComponent--container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=Founders.css.map */

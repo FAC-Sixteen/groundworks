@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AcceptDecline.css";
+import "../../style/css/AcceptDecline.css";
 
 const AcceptDecline = () => {
   return (

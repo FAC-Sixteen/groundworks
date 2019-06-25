@@ -1,0 +1,28 @@
+.SignupForm {}
+
+.Signup--Fieldset {
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.Signup--label {}
+
+.Signup--input {
+  float: right;
+  width: 50%;
+}
+
+.Signup--row {
+  margin: .5rem;
+  padding: .5rem;
+  text-align: left;
+}
+
+.Signup--div-p1 {}
+
+.SignupForm--submit {
+  display: block;
+  margin: auto;
+}

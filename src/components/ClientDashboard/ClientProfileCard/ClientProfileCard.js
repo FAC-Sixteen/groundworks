@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./ClientProfileCard.css";
+import "../../../style/css/ClientProfileCard.css";
 
 const ClientProfileCard = () => {
   const [profile, setProfile] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("/api/client/get-client/5d08cff93136b6429a9c01eb")
+      const result = await axios(
+        "/api/client/get-client/5d08cff93136b6429a9c01eb"
+      );
       console.log(result.data);
       setProfile(result.data);
-    }
+    };
     fetchData();
   }, []);
 

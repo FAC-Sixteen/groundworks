@@ -1,0 +1,57 @@
+.StudentCompletedJobCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.StudentCompletedJobCard--projectname {
+  border-bottom: 2px solid lightgrey;
+  padding: 1rem;
+}
+
+.StudentCompletedJobCard--contactdetailsdiv {
+  width: 50%;
+  padding: 1rem;
+}
+
+.StudentCompletedJobCard--projectdetailsdiv {
+  width: 50%;
+  padding: 1rem;
+}
+
+.StudentCompletedJobCard--projectdesc {
+  padding: 1rem;
+}
+
+.StudentCompletedJobCard--container {
+  width: 600px;
+  height: auto;
+  border: 2px solid lightgrey;
+  margin: 1rem;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.StudentCompletedJobCard--contactcontainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.StudentCompletedJobCard--downloadbrief {
+  border-top: 2px solid lightgrey;
+  text-align: right;
+  padding: 1rem;
+}
+
+.StudentCompletedJobCard--downloadbrief__name {
+  padding-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+/*# sourceMappingURL=StudentCompletedJobCard.css.map */

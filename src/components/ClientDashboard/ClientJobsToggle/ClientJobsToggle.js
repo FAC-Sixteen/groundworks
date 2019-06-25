@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ClientJobsToggle.css";
+import "../../../style/css/ClientJobsToggle.css";
 import ClientCompletedJobCard from "../CompletedJobCard/ClientCompletedJobCard.js";
 import ClientCurrentJobCard from "../CurrentJobCard/CurrentJobCard.js";
 import LongStudentProfileCard from "../LongStudentProfileCard/LongStudentProfileCard.js";

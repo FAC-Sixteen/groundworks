@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./LongStudentProfileCard.css";
+import "../../../style/css/LongStudentProfileCard.css";
 import AcceptDecline from "../../AccectDeclineButtons/AcceptDecline";
 
 const LongStudentProfileCard = props => {
