@@ -11,8 +11,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "node index.js",
-    "startdev": "webpack-dev-server --open --hot --mode development",
+    "start": "webpack-dev-server --open --hot --mode development",
     "devbuild": "webpack --mode production",
     "sass": "sass --watch src/style/sass:src/style/css",
     "clean-public": "npm run remove-public && mkdir public",
