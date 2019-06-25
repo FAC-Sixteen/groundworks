@@ -37,7 +37,7 @@ const RegisterPortal = props => {
       console.log(`Fake submitting: ${data}`);
       console.log(user);
       try {
-        const response = await axios.post(`/api/${user}/sign-up`, data);
+        const response = await axios.post(`${API_HOST}/${user}/sign-up`, data);
         if (response.status === 200) {
           // check if response status is ok
           props.history.push("/StudentDashboard");

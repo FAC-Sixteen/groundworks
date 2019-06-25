@@ -22,25 +22,6 @@ module.exports = {
     fs: "empty",
     net: "empty"
   },
-  devServer: {
-    historyApiFallback: true, //goes back to hompage if uncaught exception, also required for React Router
-    port: 3000, // Port for the front end.
-    contentBase: "/src",
-    compress: true, // compresses thr file
-    hot: true, //auto reload.
-    https: false,
-    proxy: {
-      "/api": {
-        // when on front end an API call is made, starting with "/api". these following lines will delete "api" part and replace with target line
-        target: "http://localhost:8080",
-        pathRewrite: {
-          "^/api": ""
-        },
-        changeOrigin: true, // changeOrigin allows you to change from port 3000 to 8080. Switch from front to back.
-        secure: false
-      }
-    }
-  },
   plugins: [
     new CleanWebpackPlugin(), //deletes dist folder before each run or build
     new miniCssExtractPlugin({
@@ -54,8 +35,8 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("development"),
-        API_HOST: "http://localhost:8080"
+        NODE_ENV: JSON.stringify("production"),
+        API_HOST: "https://groundworks-server.herokuapp.com/"
       }
     })
   ] // Connect bundle.js to index.html file is dist.
