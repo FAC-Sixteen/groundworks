@@ -28,6 +28,8 @@ const LoginPortal = (props) => {
       }
     }
     validate()
+    setDetails({ email: "", password: "" });
+    setText({text:"Please enter your information"});
   };
 
   return ( <
