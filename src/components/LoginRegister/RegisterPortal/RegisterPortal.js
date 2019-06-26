@@ -17,6 +17,7 @@ const RegisterPortal = props => {
     skills: "",
     aboutYou: "",
     LinkedinURL: "",
+    photoURL: "",
     text: "Please press submit when complete"
   });
 
@@ -65,6 +66,7 @@ const RegisterPortal = props => {
       skills: "",
       aboutYou: "",
       LinkedinURL: "",
+      photoURL: "",
       text: ""
     });
   };
@@ -126,6 +128,9 @@ const RegisterPortal = props => {
         <h2 className="form--el form--input__title">LinkedIn:</h2>
         <input className="form--el input" type="text" onChange={handleChange}
           name="LinkedinURL" value={details.LinkedinURL} />
+        <h2 className="form--el form--input__title">Photo URL:</h2>
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="photoURL" value={details.photoURL} />
 
         <h3>{details.text}</h3>
 

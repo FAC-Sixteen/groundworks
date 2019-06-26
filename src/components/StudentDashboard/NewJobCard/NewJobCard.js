@@ -6,7 +6,7 @@ const StudentNewJobCard = props => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("/api/client/all-briefs");
+      const result = await axios("/api/brief/all-briefs");
       setData(result.data);
     };
     fetchData();
