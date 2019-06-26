@@ -1,0 +1,62 @@
+.OurplatformComponent {
+  text-align: center;
+  line-height: 1.6;
+  /* background-color: rgba(246, 250, 254, 1); */
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+50,cec7ec+87,c1bfea+100 */
+  background: rgb(235, 233, 249); /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(235, 233, 249, 1) 0%,
+    rgba(216, 208, 239, 1) 50%,
+    rgba(206, 199, 236, 1) 87%,
+    rgba(193, 191, 234, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(235, 233, 249, 1) 0%,
+    rgba(216, 208, 239, 1) 50%,
+    rgba(206, 199, 236, 1) 87%,
+    rgba(193, 191, 234, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    rgba(235, 233, 249, 1) 0%,
+    rgba(216, 208, 239, 1) 50%,
+    rgba(206, 199, 236, 1) 87%,
+    rgba(193, 191, 234, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.OurplatformComponent--header {
+  padding-bottom: 5vh;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.OurplatformComponent--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.OurplatformComponent--leftdiv__container {
+  width: 50vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: justify;
+}
+
+.OurplatformComponent--rightdiv__container img {
+  height: 20rem;
+  width: auto;
+}
+
+@media only screen and (max-width: 530px) {
+  .OurplatformComponent--container {
+    flex-direction: column-reverse;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
-import "./RegisterPortal.css";
+import "../../../style/css/RegisterPortal.css";
 import axios from "axios";
 
 const RegisterPortal = props => {

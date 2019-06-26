@@ -1,0 +1,38 @@
+.NewBrief--Fieldset {
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.NewBrief--CompanyInfo {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+}
+
+.NewBrief--CompanyInfo__leftdiv {
+  padding: 1rem;
+}
+
+.NewBrief--CompanyInfo__rightdiv {
+  padding: 1rem;
+}
+
+.NewBrief--input {
+  float: right;
+  width: 50%;
+}
+
+.NewBrief--row {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.NewBriefForm--submit {
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=NewBriefForm.css.map */

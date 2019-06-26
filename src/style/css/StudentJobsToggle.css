@@ -1,0 +1,82 @@
+.StudentJobsToggle--container {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.StudentJobsToggle--div1 {
+  width: 6rem;
+  height: 2rem;
+  background-color: orange;
+  border: 2px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.StudentJobsToggle--div2 {
+  width: 6rem;
+  height: 2rem;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.StudentJobsToggle--div3 {
+  width: 6rem;
+  height: 2rem;
+  background-color: orange;
+  border: 2px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.grey1 {
+  background-color: red;
+  width: 6rem;
+  height: 2rem;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.grey2 {
+  background-color: red;
+  width: 6rem;
+  height: 2rem;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.grey3 {
+  background-color: red;
+  width: 6rem;
+  height: 2rem;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+/*# sourceMappingURL=StudentJobsToggle.css.map */

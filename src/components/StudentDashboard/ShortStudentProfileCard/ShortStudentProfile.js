@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShortStudentProfileCard.css";
+import "../../../style/css/ShortStudentProfileCard.css";
 
 const ShortStudentProfile = ({ name, course, university, year }) => {
   return (

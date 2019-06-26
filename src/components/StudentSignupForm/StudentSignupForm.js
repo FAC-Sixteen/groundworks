@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./StudentSignupForm.css";
+import "../../style/css/StudentSignupForm.css";
 import axios from "axios";
 
 function StudentSignupForm() {
@@ -17,8 +17,7 @@ function StudentSignupForm() {
   });
 
   const handleChange = event => {
-    setData({...data,[event.target.name]: event.target.value
-    }); //rest parameter adds to current state without replacing/deleting it
+    setData({ ...data, [event.target.name]: event.target.value }); //rest parameter adds to current state without replacing/deleting it
   }; //second param line 12 matches key-value pairs in state object line 6
 
   const handleSubmit = event => {

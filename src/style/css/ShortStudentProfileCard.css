@@ -1,0 +1,37 @@
+.StudentProfileCard {
+  display: flex;
+  justify-content: center;
+}
+
+.StudentProfileCard--container {
+  border: 2px solid lightgrey;
+  border-radius: 6px;
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 10rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.StudentProfileCard--image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.StudentProfileCard--editbutton__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.StudentProfileCard--editbutton {
+  color: white;
+  background-color: orange;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+}
+
+/*# sourceMappingURL=ShortStudentProfileCard.css.map */

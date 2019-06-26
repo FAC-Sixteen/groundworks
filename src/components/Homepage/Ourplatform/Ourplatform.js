@@ -1,5 +1,5 @@
 import React from "react";
-import "./Ourplatform.css";
+import "../../../style/css/Ourplatform.css";
 
 const Ourplatform = () => {
   return (

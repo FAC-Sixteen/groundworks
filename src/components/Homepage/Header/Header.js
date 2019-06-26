@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
+import "../../../style/css/Header.css";
 import HeaderJoinButton from "../../Button/HeaderJoinButton";
-import "../../Button/HeaderJoinButton.css";
+import "../../../style/css/HeaderJoinButton.css";
 
 const Header = () => {
   return (
@@ -13,8 +13,8 @@ const Header = () => {
           Gain practical work experience, explore
           <br /> career paths and generate income.
         </p>
-        <Link to='./Join'>
-        <HeaderJoinButton />
+        <Link to="./Join">
+          <HeaderJoinButton />
         </Link>
       </div>
       <div className="headerComponent--employer">
@@ -22,8 +22,8 @@ const Header = () => {
         <p className="headerComponent--employerParagraph ">
           Hire better and smarter. Connect directly with reviewed candidates.
         </p>
-        <Link to='./Join'>
-        <HeaderJoinButton />
+        <Link to="./Join">
+          <HeaderJoinButton />
         </Link>
       </div>
     </div>

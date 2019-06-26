@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import "./Founders.css";
+import { Link } from "react-router-dom";
+import "../../../style/css/Founders.css";
 import Founder from "./Founder/Founder";
 
 const Founders = () => {
@@ -39,8 +39,8 @@ const Founders = () => {
         out to find a solution, which led us to Groundworks. Our way to
         revolutionise how companies connect with students worldwide.
       </p>
-      <Link to='./Join'>
-      <button className="FoundersComponent--joinbutton">Join</button>
+      <Link to="./Join">
+        <button className="FoundersComponent--joinbutton">Join</button>
       </Link>
     </div>
   );
