@@ -1,5 +1,5 @@
 Arguments: 
-  /home/john/.nvm/versions/node/v12.4.0/bin/node /usr/local/bin/yarn remove html-webpack-plugin
+  /home/john/.nvm/versions/node/v12.4.0/bin/node /usr/local/bin/yarn add html-webpack-plugin
 
 PATH: 
   /home/john/.nvm/versions/node/v12.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/home/john/Documents/IT and CS/FAC/groundworks-project/groundworks-client/node_modules/loader-utils/node_modules/json5'
+  Error: EACCES: permission denied, unlink '/home/john/Documents/IT and CS/FAC/groundworks-project/groundworks-client/node_modules/.yarn-integrity'
 
 npm manifest: 
   {
@@ -30,10 +30,10 @@ npm manifest:
     },
     "scripts": {
       "test": "jest",
+      "dev": "webpack-dev-server --open --hot --mode=development",
       "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --config ./webpack.config.js --content-base public/ --progress --colors ",
-      "build": "webpack --mode production",
-      "heroku-prebuild": "yarn install --dev",
-      "heroku-postbuild": "yarn install && yarn run build",
+      "build": "webpack --mode=production",
+      "heroku-prebuild": "yarn install && yarn run build",
       "sass": "sass --watch src/style/sass:src/style/css"
     },
     "engines": {
@@ -3821,7 +3821,7 @@ Lockfile:
       relateurl "0.2.x"
       uglify-js "3.4.x"
   
-  html-webpack-plugin@^3.2.0:
+  html-webpack-plugin@3.2.0:
     version "3.2.0"
     resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.2.0.tgz#b01abbd723acaaa7b37b6af4492ebda03d9dd37b"
     integrity sha1-sBq71yOsqqeze2r0SS69oD2d03s=
