@@ -9,7 +9,7 @@ module.exports = {
     // Here we are telling it where to build when we call Yarn run build
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].[hash].js", // setting name of bundle file.
-    publicPath: "/" //required for React router
+    publicPath: "./" //required for React router
   },
   module: {
     rules: [
