@@ -13,6 +13,8 @@
     "test": "jest",
     "start": "webpack-dev-server --open --hot --mode development",
     "build": "webpack --mode production",
+    "heroku-prebuild": "yarn install --dev",
+    "heroku-postbuild": "yarn install && yarn run build",
     "sass": "sass --watch src/style/sass:src/style/css"
   },
   "engines": {
