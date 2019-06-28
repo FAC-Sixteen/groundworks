@@ -11,10 +11,12 @@
   },
   "scripts": {
     "test": "jest",
+    "dev": "webpack-dev-server --open --hot --mode=development",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --config ./webpack.config.js --content-base public/ --progress --colors ",
-    "build": "webpack --mode production",
+    "build": "webpack --mode=production",
     "heroku-prebuild": "yarn install --dev",
     "heroku-postbuild": "yarn install && yarn run build",
+    "postinstall": "webpack -p",
     "sass": "sass --watch src/style/sass:src/style/css"
   },
   "engines": {
