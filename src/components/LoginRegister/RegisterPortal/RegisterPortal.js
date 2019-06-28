@@ -5,7 +5,7 @@ import axios from "axios";
 
 const RegisterPortal = props => {
   const [user, setUser] = useState("");
-  const [data, setData] = useState({
+  const [details, setDetails] = useState({
     userName: "",
     email: "",
     password: "",
@@ -16,12 +16,14 @@ const RegisterPortal = props => {
     courseStudied: "",
     skills: "",
     aboutYou: "",
-    LinkedinURL: ""
+    LinkedinURL: "",
+    photoURL: "",
+    text: "Please press submit when complete"
   });
 
   const handleChange = event => {
-    setData({
-      ...data,
+    setDetails({
+      ...details,
       [event.target.name]: event.target.value,
       userType: user
     });
@@ -29,19 +31,21 @@ const RegisterPortal = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(data);
+    console.log(details);
     console.log(user);
     console.log(props);
 
     const addRegister = async () => {
-      console.log(`Fake submitting: ${data}`);
+      console.log(`Fake submitting: ${details}`);
       console.log(user);
       try {
-        const response = await axios.post(`/api/${user}/sign-up`, data);
+        const response = await axios.post(`/api/${user}/sign-up`, details)
         if (response.status === 200) {
           // check if response status is ok
           props.history.push("/StudentDashboard");
           //success scenario
+        } else if (response.status === 400) {
+          setDetails({ text: data.msg })
         }
       } catch (error) {
         console.error(error);
@@ -50,7 +54,7 @@ const RegisterPortal = props => {
     addRegister();
     // props.history.push("/StudentDashboard");
 
-    setData({
+    setDetails({
       userName: "",
       email: "",
       password: "",
@@ -61,7 +65,9 @@ const RegisterPortal = props => {
       courseStudied: "",
       skills: "",
       aboutYou: "",
-      LinkedinURL: ""
+      LinkedinURL: "",
+      photoURL: "",
+      text: ""
     });
   };
 
@@ -93,91 +99,43 @@ const RegisterPortal = props => {
         </fieldset>
 
         <h2 className="form--el form--input__title">Name</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="userName"
-          value={data.userName}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="userName" value={details.userName} />
         <h2 className="form--el form--input__title">Email</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="email"
-          value={data.email}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="email" value={details.email} />
         <h2 className="form--el form--input__title">Password</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="password"
-          value={data.password}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="password" value={details.password} />
         <h2 className="form--el form--input__title">Phone</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="phoneNumber"
-          value={data.phoneNumber}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="phoneNumber" value={details.phoneNumber} />
         <h2 className="form--el form--input__title">University</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="university"
-          value={data.university}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="university" value={details.university} />
         <h2 className="form--el form--input__title">Year of Study</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="yearOfStudy"
-          value={data.yearOfStudy}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="yearOfStudy" value={details.yearOfStudy} />
         <h2 className="form--el form--input__title">Course of Study</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="courseStudied"
-          value={data.courseStudied}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="courseStudied" value={details.courseStudied} />
         <h2 className="form--el form--input__title">Skills</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="skills"
-          value={data.skills}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="skills" value={details.skills} />
         <h2 className="form--el form--input__title">About You</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="aboutYou"
-          value={data.aboutYou}
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="aboutYou" value={details.aboutYou} />
         <h2 className="form--el form--input__title">LinkedIn:</h2>
-        <input
-          className="form--el input"
-          type="text"
-          onChange={handleChange}
-          name="LinkedinURL"
-          value={data.LinkedinURL}
-        />
-        <input
-          className="form--button"
-          type="submit"
-          name="submit"
-          value="Register"
-        />
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="LinkedinURL" value={details.LinkedinURL} />
+        <h2 className="form--el form--input__title">Photo URL:</h2>
+        <input className="form--el input" type="text" onChange={handleChange}
+          name="photoURL" value={details.photoURL} />
+
+        <h3>{details.text}</h3>
+
+        <input className="form--button" type="submit" name="submit"
+          value="Register" />
       </form>
     </div>
   );

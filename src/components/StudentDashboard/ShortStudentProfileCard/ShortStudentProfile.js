@@ -11,12 +11,12 @@ const ShortStudentProfile = ({ name, course, university, year }) => {
         <div>
           <img
             className="StudentProfileCard--image"
-            src="https://user-images.githubusercontent.com/32282170/59887196-0bf8a700-93cb-11e9-9016-e046470cb8e9.jpg"
+            src="https://user-images.githubusercontent.com/32282170/60135235-ed6b2500-97a9-11e9-8d60-5affb9149370.jpg"
           />
           <h4>{name}</h4>
-          <h4>{course}</h4>
+          <h4>Course: {course}</h4>
           <h4>{university}</h4>
-          <h4>Year {year}</h4>
+          <h4>Year: {year}</h4>
         </div>
       </div>
     </div>

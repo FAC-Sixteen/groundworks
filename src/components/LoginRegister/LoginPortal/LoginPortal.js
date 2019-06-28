@@ -29,8 +29,10 @@ const LoginPortal = props => {
       } catch (error) {
         console.error(error);
       }
-    };
-    validate();
+    }
+    validate()
+    setDetails({ email: "", password: "" });
+    setText({text:"Please enter your information"});
   };
 
   return (
