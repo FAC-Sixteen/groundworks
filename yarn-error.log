@@ -1,5 +1,5 @@
 Arguments: 
-  /home/john/.nvm/versions/node/v12.4.0/bin/node /usr/local/bin/yarn install
+  /home/john/.nvm/versions/node/v12.4.0/bin/node /usr/local/bin/yarn add webpack-dev-server
 
 PATH: 
   /home/john/.nvm/versions/node/v12.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -30,7 +30,7 @@ npm manifest:
     },
     "scripts": {
       "test": "jest",
-      "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --config webpack.config.js --content-base public/ --progress --colors ",
+      "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --config ./webpack.config.js --content-base public/ --progress --colors ",
       "build": "webpack --mode production",
       "heroku-prebuild": "yarn install --dev",
       "heroku-postbuild": "yarn install && yarn run build",
@@ -72,8 +72,7 @@ npm manifest:
       "style-loader": "^0.23.1",
       "supertest": "^4.0.2",
       "webpack": "^4.32.2",
-      "webpack-cli": "^3.3.2",
-      "webpack-dev-server": "3.7.2"
+      "webpack-cli": "^3.3.2"
     }
   }
 
