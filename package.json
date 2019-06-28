@@ -16,7 +16,6 @@
     "build": "webpack --mode=production",
     "heroku-prebuild": "yarn install --dev",
     "heroku-postbuild": "yarn install && yarn run build",
-    "postinstall": "webpack -p",
     "sass": "sass --watch src/style/sass:src/style/css"
   },
   "engines": {
