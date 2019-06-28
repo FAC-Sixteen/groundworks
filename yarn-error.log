@@ -1,5 +1,5 @@
 Arguments: 
-  /home/john/.nvm/versions/node/v12.4.0/bin/node /usr/local/bin/yarn install
+  /home/john/.nvm/versions/node/v12.4.0/bin/node /usr/local/bin/yarn add webpack-dev-server -D
 
 PATH: 
   /home/john/.nvm/versions/node/v12.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/home/john/Documents/IT and CS/FAC/groundworks-project/groundworks-client/node_modules/js-yaml/node_modules/esprima'
+  Error: EACCES: permission denied, unlink '/home/john/Documents/IT and CS/FAC/groundworks-project/groundworks-client/node_modules/js-yaml/node_modules/esprima/ChangeLog'
 
 npm manifest: 
   {
@@ -72,8 +72,7 @@ npm manifest:
       "style-loader": "^0.23.1",
       "supertest": "^4.0.2",
       "webpack": "^4.32.2",
-      "webpack-cli": "^3.3.2",
-      "webpack-dev-server": "^3.5.1"
+      "webpack-cli": "^3.3.2"
     }
   }
 
