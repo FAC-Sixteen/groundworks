@@ -18,6 +18,7 @@
     "sass": "sass --watch src/style/sass:src/style/css"
   },
   "engines": {
+    "node": "12.4.0",
     "yarn": "1.16.0"
   },
   "dependencies": {
