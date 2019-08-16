@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../../../style/css/NewJobCard.css";
 import axios from "axios";
 
-const StudentNewJobCard = props => {
+const StudentNewJobCard = ({StudentNewJobCard, props}) => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios("/api/brief/all-briefs");
@@ -11,8 +12,9 @@ const StudentNewJobCard = props => {
     };
     fetchData();
   }, []);
+  
   return (
-    <ul className={props.StudentNewJobCard ? "showing" : "hidden"}>
+    <ul className={StudentNewJobCard ? "showing" : "hidden"}>
       {data.map((value, index) => {
         return (
           <li key={index}>

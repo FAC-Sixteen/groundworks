@@ -22,7 +22,7 @@ module.exports = {
     net: "empty"
   },
   devServer: {
-    historyApiFallback: true, //goes back to hompage if uncaught exception, also required for React Router
+    historyApiFallback: true, //goes back to homepage if uncaught exception, also required for React Router
     port: 3000, // Port for the front end.
     contentBase: "/src",
     compress: true, // compresses thr file
