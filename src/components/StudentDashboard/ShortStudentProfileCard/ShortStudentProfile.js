@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../style/css/ShortStudentProfileCard.css";
 
-const ShortStudentProfile = ({ name, course, university, year }) => {
+const ShortStudentProfile = ({ name, course, university, year, photo }) => {
   return (
     <div className="StudentProfileCard">
       <div className="StudentProfileCard--container">
@@ -11,7 +11,7 @@ const ShortStudentProfile = ({ name, course, university, year }) => {
         <div>
           <img
             className="StudentProfileCard--image"
-            src="https://user-images.githubusercontent.com/32282170/60135235-ed6b2500-97a9-11e9-8d60-5affb9149370.jpg"
+            src={photo}
           />
           <h4>{name}</h4>
           <h4>Course: {course}</h4>
