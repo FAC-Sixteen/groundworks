@@ -2,22 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../../../style/css/StudentCompletedJobCard.css";
 import axios from "axios";
 
-const StudentCompletedJobCard = ({StudentCompletedJobCard, props}) => {
-  const [passedProps, updateProps] = useState(props);
-
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios("/api/brief/all-briefs");
-      setData(result.data);
-    };
-    fetchData();
-    
-  }, []);
+const StudentCompletedJobCard = ({StudentCompletedJobCard, props, compBriefs}) => {
 
   return (
     <ul className={StudentCompletedJobCard ? "showing" : "hidden"}>
-      {data.map((value, index) => {
+      {compBriefs.map((value, index) => {
         return (
           <li key={index}>
             {
