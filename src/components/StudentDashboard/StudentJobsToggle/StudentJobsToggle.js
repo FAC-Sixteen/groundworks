@@ -4,7 +4,7 @@ import StudentCompletedJobCard from "../CompletedJobCard/StudentCompletedJobCard
 import StudentCurrentJobCard from "../CurrentJobCard/CurrentJobCard";
 import NewJobCard from "../NewJobCard/NewJobCard";
 
-const StudentJobsToggle = ({ props, currentJobs, compJobs }) => {
+const StudentJobsToggle = ({ props, newJob, currentJobs, compJobs }) => {
 
   const [grey1, setGrey1] = useState(true);
   const [grey2, setGrey2] = useState(false);
@@ -52,7 +52,7 @@ const StudentJobsToggle = ({ props, currentJobs, compJobs }) => {
       </div>
       <StudentCompletedJobCard StudentCompletedJobCard={grey3} props={props} compBriefs={compJobs} />
       <StudentCurrentJobCard StudentCurrentJobCard={grey2} props={props} currentJobs={currentJobs} />
-      <NewJobCard StudentNewJobCard={grey1} props={props} />
+      <NewJobCard StudentNewJobCard={grey1} props={props} newJob={newJob} />
     </div>
   );
 };

@@ -3,15 +3,6 @@ import "../../../style/css/StudentCurrentJobCard.css";
 import axios from "axios";
 
 const StudentCurrentJobCard = ({StudentCurrentJobCard, currentJobs, props}) => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios("/api/brief/brief-get/5d1286b8a0aa563dc52dbbe7");
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
 
   return (
     <ul className={StudentCurrentJobCard ? "showing" : "hidden"}>

@@ -8,6 +8,7 @@ import "./css/allPages.css";
 
 const StudentDashboard = () => {
   const [profile, setProfile] = useState({});
+  const [newJob, setNewJob] = useState([]);
   const [currentJobs, setCurrentJobs] = useState([]);
   const [completedBriefs, setCompletedBriefs] = useState([]);
 
@@ -16,7 +17,8 @@ const StudentDashboard = () => {
       const result = await axios(`/api/student/get-student/` + document.cookie.slice(3));
       
       setProfile(result.data.profile);
-      setCurrentJobs(result.data.currentJobs);
+      setNewJob(result.data.newJob);
+      setCurrentJobs(result.data.currentJob);
       setCompletedBriefs(result.data.completedBriefs);
     };
     fetchData();
@@ -27,7 +29,7 @@ const StudentDashboard = () => {
       <NavBar />
       <div className="fullViewportHeight">
         <ShortStudentProfileCard props={profile} />
-        <StudentJobsToggle props={profile} currentJobs={currentJobs} compJobs={completedBriefs} />
+        <StudentJobsToggle props={profile} newJob={newJob} currentJobs={currentJobs} compJobs={completedBriefs} />
       </div>
     </div>
   );
