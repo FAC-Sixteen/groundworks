@@ -7,14 +7,16 @@ import Footer from "../components/Footer/Footer";
 import "./css/allPages.css";
 
 const StudentDashboard = () => {
-  const [profile, setProfile] = useState([]);
+  const [profile, setProfile] = useState({});
+  const [compBriefs, setCompBriefs] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(`/api/student/get-student/` + document.cookie.slice(3));
-      setProfile(result.data);
+      
+      setProfile(result.data.profile);
+      setCompBriefs(result.data.briefs);
     };
-
     fetchData();
   }, []);
 
@@ -22,8 +24,8 @@ const StudentDashboard = () => {
     <div>
       <NavBar />
       <div className="fullViewportHeight">
-        <ShortStudentProfileCard props={profile}/>
-        <StudentJobsToggle props={profile}/>
+        <ShortStudentProfileCard props={profile} />
+        <StudentJobsToggle props={profile} compJobs={compBriefs} />
       </div>
     </div>
   );
