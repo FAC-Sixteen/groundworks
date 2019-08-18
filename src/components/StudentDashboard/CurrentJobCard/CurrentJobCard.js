@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../../style/css/StudentCurrentJobCard.css";
 import axios from "axios";
 
-const StudentCurrentJobCard = ({StudentCurrentJobCard, props}) => {
+const StudentCurrentJobCard = ({StudentCurrentJobCard, currentJobs, props}) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const StudentCurrentJobCard = ({StudentCurrentJobCard, props}) => {
 
   return (
     <ul className={StudentCurrentJobCard ? "showing" : "hidden"}>
-      {data.map((value, index) => {
+      {currentJobs.map((value, index) => {
         return (
           <li key={index}>
             {
